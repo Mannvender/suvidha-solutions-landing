@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
           content="cheating,cheetahs,nft,digital,art,block,chain,community,cheating-cheetahs,giveaway,phantom,wallet,connect,solana,sol,metaplex,candy-machine"
         />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English"></meta>
         <link
           rel="apple-touch-icon"
@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
@@ -58,7 +58,7 @@ export default class MyDocument extends Document {
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
+          charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
         <link
