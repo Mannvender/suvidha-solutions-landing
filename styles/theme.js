@@ -9,6 +9,8 @@ export default {
     accent1: "#FFEB4D",
     accent2: "#D2642F",
     accent3: "#99BE9B",
+    accent4: "#805E73",
+    accent5: "#87BCDE",
     dark: "#0C101A",
     dark1: "#473F34",
     dark2: "#69696a",

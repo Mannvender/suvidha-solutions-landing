@@ -34,17 +34,19 @@ const Index = () => {
         <ParallaxLayer
           offset={0}
           speed={1}
-          style={{ backgroundColor: colors.primary }}
+          style={{
+            backgroundImage: `radial-gradient(at 98% 5%, ${colors.accent2} 0, ${colors.primary} 57%)`,
+          }}
         />
         <ParallaxLayer
           offset={1}
           speed={1}
-          style={{ backgroundColor: "#805E73" }}
+          style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
           offset={2}
           speed={1}
-          style={{ backgroundColor: "#87BCDE" }}
+          style={{ backgroundColor: colors.accent5 }}
         />
         {/* assets */}
         <ParallaxLayer offset={0} speed={1} style={{ pointerEvents: "none" }}>

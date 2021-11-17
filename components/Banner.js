@@ -1,7 +1,6 @@
 import React from "react";
-import { Flex, Heading, Box } from "rebass";
+import { Flex, Heading } from "rebass";
 import styled, { useTheme } from "styled-components";
-import Image from "next/image";
 import Button from "components/Button";
 import { LinkExternal as Link } from "components/Links";
 
@@ -14,21 +13,29 @@ const OutlineHeading = styled(Heading)`
   -webkit-font-smoothing: antialiased;
 `;
 const Banner = (props) => {
-  const { colors } = useTheme();
+  const { fontWeights } = useTheme();
   return (
-    <Flex
-      flexDirection="row"
-      paddingTop={["76px"]}
-      justifyContent="space-between"
-    >
-      <Flex flexBasis={["90%"]} flexDirection="column" width={['30vw']}>
-        <Heading fontSize={[4, 6]} fontWeight={[500]} marginBottom={[0]}>
+    <Flex flexDirection="row" pt={[6]} justifyContent="space-between">
+      <Flex flexBasis={["90%"]} flexDirection="column" width={["30vw"]}>
+        <Heading
+          fontSize={[4, 7]}
+          fontWeight={[fontWeights.bold]}
+          marginBottom={[0]}
+        >
           THE
         </Heading>
-        <OutlineHeading fontSize={[4, 6]} fontWeight={[500]} marginBottom={[0]} >
+        <OutlineHeading
+          fontSize={[4, 6]}
+          fontWeight={[fontWeights.bold]}
+          marginBottom={[0]}
+        >
           SHAPE SHIFTER
         </OutlineHeading>
-        <Heading fontSize={[4, 6]} fontWeight={[500]} marginBottom={[5]}>
+        <Heading
+          fontSize={[4, 7]}
+          fontWeight={[fontWeights.bold]}
+          marginBottom={[5]}
+        >
           CHEETAH
         </Heading>
         <Link
@@ -36,18 +43,9 @@ const Banner = (props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-        <Button>FIND MORE</Button>
+          <Button>FIND MORE</Button>
         </Link>
       </Flex>
-      {/* <Box sx={{ position: "relative" }} height="100%" width="100%" mb={[3, 0]}>
-        <Image
-          src={`/cheetah_transparent.png`}
-          alt={`bender`}
-          layout="fill"
-          objectFit="contain"
-          quality="70"
-        />
-      </Box> */}
     </Flex>
   );
 };
