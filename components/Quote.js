@@ -13,7 +13,7 @@ const Quote = () => {
       sx={{
         background: `linear-gradient(90deg, ${colors.accent1} 100%, transparent 0%)`,
       }}
-      py={[3]}
+      py={[4]}
     >
       <Flex
         maxWidth={["1000px"]}

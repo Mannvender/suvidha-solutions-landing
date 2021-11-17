@@ -8,6 +8,7 @@ import { LinkExternal as Link } from "components/Links";
 
 const StyledHeader = styled.nav`
   width: 100%;
+  max-width: 1040px;
   padding: 10px 10px;
   display: flex;
   flex-direction: row;
