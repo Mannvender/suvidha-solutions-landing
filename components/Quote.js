@@ -7,53 +7,43 @@ const StyledSpan = styled.span`
 `;
 
 const Quote = () => {
-  const { colors } = useTheme();
+  const { colors, fontWeights } = useTheme();
   return (
-    <Box
+    <Flex
+      maxWidth={["1000px"]}
+      margin={["0 0"]}
+      flexDirection={["row"]}
+      alignItems="center"
+      justifyContent="center"
+      flexWrap="wrap"
       sx={{
-        background: `linear-gradient(90deg, ${colors.accent1} 100%, transparent 0%)`,
+        background: `linear-gradient(90deg, ${colors.accent1} 100%, rgba(0,0,0,0.2) 0%)`,
       }}
-      py={[4]}
     >
-      <Flex
-        maxWidth={["1000px"]}
-        margin={["0 0"]}
-        flexDirection={["row"]}
-        alignItems="center"
-        justifyContent="center"
-        flexWrap="wrap"
-      >
-        <Box
-          sx={{ position: "relative" }}
-          height="150px"
-          width="150px"
-          mb={[3, 0]}
+      <Box sx={{ position: "relative" }} flexBasis={["30%"]} height="300px">
+        <Image
+          src={`/julie_mao.jpg`}
+          alt={`bender`}
+          layout="fill"
+          objectFit="cover"
+          quality="70"
+        />
+      </Box>
+      <Box flexBasis={["100%", "70%"]} p={[4]}>
+        <Heading fontSize={[4, 5]} fontWeight={["normal"]} color={colors.dark}>
+          “The Cheating Cheetah has different mood and appearance for different
+          people, it shows you what you wanna see... Don't fall for his tricks”
+        </Heading>
+        <Heading
+          fontSize={[3, 5]}
+          fontWeight={[fontWeights.bold]}
+          marginTop={[1]}
+          color={colors.dark2}
         >
-          <Image
-            src={`/julie_mao.jpg`}
-            alt={`bender`}
-            layout="fill"
-            objectFit="cover"
-            quality="70"
-          />
-        </Box>
-        <Box flexBasis={["100%", "70%"]} marginLeft={[0, 5]} px={[4, 0]}>
-          <Heading fontSize={[3, 4]} fontWeight={[500]} color={colors.dark}>
-            “The Cheating Cheetah has different mood and appearance for
-            different people, it shows you what you wanna see... Don't fall for
-            his tricks”
-          </Heading>
-          <Heading
-            fontSize={[3, 5]}
-            fontWeight={[600]}
-            marginTop={[1]}
-            color={colors.dark2}
-          >
-            Boss Lady, <StyledSpan>Designer</StyledSpan>
-          </Heading>
-        </Box>
-      </Flex>
-    </Box>
+          Boss Lady, <StyledSpan>Designer</StyledSpan>
+        </Heading>
+      </Box>
+    </Flex>
   );
 };
 

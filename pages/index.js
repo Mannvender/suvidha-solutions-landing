@@ -165,15 +165,16 @@ const Index = () => {
           }}
         />
         <ParallaxLayer
-          offset={0}
-          speed={1.2}
+          offset={2}
+          speed={-0}
           style={{
             display: "flex",
-            alignItems: "flex-start",
+            alignItems: "center",
             justifyContent: "center",
           }}
+          onClick={() => parallax.current.scrollTo(0)}
         >
-          <Header />
+          <img src={url("clients-main")} style={{ width: "40%" }} />
         </ParallaxLayer>
 
         {/* Various Sections */}
@@ -192,7 +193,18 @@ const Index = () => {
             <Banner />
           </Flex>
         </ParallaxLayer>
-
+        <ParallaxLayer
+          factor={0.2}
+          offset={0}
+          speed={1.2}
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "center",
+          }}
+        >
+          <Header />
+        </ParallaxLayer>
         <ParallaxLayer
           factor={1}
           offset={1}
@@ -208,8 +220,9 @@ const Index = () => {
             <Quote />
           </Box>
         </ParallaxLayer>
+      </Parallax>
 
-        {/* <ParallaxLayer
+      {/* <ParallaxLayer
           offset={1}
           speed={0.1}
           onClick={() => parallax.current.scrollTo(2)}
@@ -221,49 +234,8 @@ const Index = () => {
         >
           <img src={url("bash")} style={{ width: "40%" }} />
         </ParallaxLayer> */}
-
-        <ParallaxLayer
-          offset={2}
-          speed={-0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          onClick={() => parallax.current.scrollTo(0)}
-        >
-          <img src={url("clients-main")} style={{ width: "40%" }} />
-        </ParallaxLayer>
-      </Parallax>
     </Box>
   );
-  /*
-  return (
-  <>
-    <Box position="relative">
-      <Box>
-        <Flex
-          height={["100vh"]}
-          maxWidth={["1024px"]}
-          margin={["0 auto"]}
-          flexDirection={["column"]}
-          sx={{
-            backgroundImage: "url(/cheetah_transparent.png)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "690px 690px",
-            backgroundPosition: "120% 100%",
-          }}
-        >
-          <Header />
-          <Banner />
-        </Flex>
-        <Quote />
-      </Box>
-      <Footer />
-    </Box>
-  </>
-  );
-  */
 };
 
 export default Index;

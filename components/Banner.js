@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Heading } from "rebass";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import Button from "components/Button";
 import { LinkExternal as Link } from "components/Links";
 
@@ -13,29 +13,20 @@ const OutlineHeading = styled(Heading)`
   -webkit-font-smoothing: antialiased;
 `;
 const Banner = (props) => {
-  const { fontWeights } = useTheme();
   return (
     <Flex flexDirection="row" pt={[6]} justifyContent="space-between">
       <Flex flexBasis={["90%"]} flexDirection="column" width={["30vw"]}>
-        <Heading
-          fontSize={[4, 7]}
-          fontWeight={[fontWeights.bold]}
-          marginBottom={[0]}
-        >
+        <Heading fontSize={[4, 7]} fontWeight={["bold"]} marginBottom={[0]}>
           THE
         </Heading>
         <OutlineHeading
           fontSize={[4, 6]}
-          fontWeight={[fontWeights.bold]}
+          fontWeight={["bold"]}
           marginBottom={[0]}
         >
           SHAPE SHIFTER
         </OutlineHeading>
-        <Heading
-          fontSize={[4, 7]}
-          fontWeight={[fontWeights.bold]}
-          marginBottom={[5]}
-        >
+        <Heading fontSize={[4, 7]} fontWeight={["bold"]} marginBottom={[5]}>
           CHEETAH
         </Heading>
         <Link
