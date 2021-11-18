@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box, Flex } from "rebass";
+import { Box, Flex, Heading } from "rebass";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import Banner from "components/Banner";
@@ -55,10 +55,10 @@ const Index = () => {
               position: "relative",
               top: "100%",
               left: "50%",
-              transform: "translateY(-700px)",
+              transform: "translateY(-620px)",
             }}
-            height="700px"
-            width="700px"
+            height="620px"
+            width="620px"
           >
             <Image
               src={`/cheetah_transparent.png`}
@@ -79,16 +79,6 @@ const Index = () => {
             backgroundSize: "cover",
           }}
         />
-        <ParallaxLayer
-          offset={1.3}
-          speed={-0.3}
-          style={{ pointerEvents: "none" }}
-        >
-          <img
-            src={url("satellite4")}
-            style={{ width: "15%", marginLeft: "70%" }}
-          />
-        </ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
           <img
             src={url("cloud")}
@@ -144,6 +134,16 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
+          offset={1.225}
+          speed={-0.3}
+          style={{ pointerEvents: "none" }}
+        >
+          <img
+            src={"./meteor.png"}
+            style={{ width: "30%", marginLeft: "70%" }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={2.5}
           speed={-0.4}
           style={{
@@ -155,26 +155,88 @@ const Index = () => {
         >
           <img src={url("earth")} style={{ width: "60%" }} />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-            backgroundImage: url("clients", true),
-          }}
-        />
+        <ParallaxLayer offset={2} speed={-0.3}>
+          <Box
+            sx={{
+              position: "relative",
+              left: "20%",
+              top: "50%",
+              transform: "translate(-50%,-50%)",
+              display: "flex",
+            }}
+            height="350px"
+            width="230px"
+          >
+            <Image
+              src={`/team_2.png`}
+              alt={`bender`}
+              layout="fill"
+              objectFit="cover"
+              quality="70"
+            />
+            <Heading
+              textAlign="center"
+              fontSize={[5]}
+              color={colors.primary}
+              width="100%"
+              sx={{
+                position: "absolute",
+                bottom: "-32px",
+              }}
+            >
+              Artist
+            </Heading>
+          </Box>
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={-0.3}>
+          <Box
+            sx={{
+              position: "relative",
+              left: "80%",
+              top: "50%",
+              transform: "translate(-50%,-50%)",
+            }}
+            height="350px"
+            width="230px"
+          >
+            <Image
+              src={`/team_3.png`}
+              alt={`bender`}
+              layout="fill"
+              objectFit="cover"
+              quality="70"
+            />
+          </Box>
+        </ParallaxLayer>
         <ParallaxLayer
           offset={2}
           speed={-0}
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
           }}
           onClick={() => parallax.current.scrollTo(0)}
         >
-          <img src={url("clients-main")} style={{ width: "40%" }} />
+          <Heading fontSize={[8]} color={colors.primary}>
+            Team
+          </Heading>
+          <Box
+            sx={{
+              position: "relative",
+            }}
+            height="450px"
+            width="300px"
+          >
+            <Image
+              src={`/team_1.png`}
+              alt={`bender`}
+              layout="fill"
+              objectFit="cover"
+              quality="70"
+            />
+          </Box>
         </ParallaxLayer>
 
         {/* Various Sections */}
