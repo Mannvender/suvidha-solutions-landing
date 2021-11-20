@@ -31,13 +31,23 @@ const ToastContainer = styled(ToastContainerBase).attrs({
     background-color: #1bbdd6;
   }
 `;
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title>Cheating Cheetahs</title>
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider
+        theme={{
+          ...theme,
+          colors: theme.colors[getRandomInt(0, theme.colors.length - 1)],
+        }}
+      >
         <WalletConnectionProvider>
           <Component {...pageProps} />
         </WalletConnectionProvider>

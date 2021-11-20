@@ -8,9 +8,8 @@ export default () => {
         body {
           margin: 0;
           font-size: 1rem;
-          color: ${Theme.colors.light};
+          color: ${Theme.colors[0].light};
           font-family: ${Theme.fonts.body};
-          background-image: radial-gradient(at 98% 5%, ${Theme.colors.accent2} 0, ${Theme.colors.primary} 57%);
         }
         * {
           box-sizing: border-box;
@@ -21,35 +20,28 @@ export default () => {
         }
         a{
           text-decoration: none;
-          color: ${Theme.colors.light};
+          color: ${Theme.colors[0].light};
         }
         a:hover {
-          color: ${Theme.colors.dark};
-        }
-        .underlined-link {
-          text-decoration: underline;
-          color: ${Theme.colors.primary};
-        }
-        .gray-filter {
-          filter: grayscale(1);
+          color: ${Theme.colors[0].dark};
         }
 
         /* Works on Firefox */
         * {
             scrollbar-width: thin;
-            scrollbar-color: ${Theme.colors.dark2} ${Theme.colors.dark};
+            scrollbar-color: ${Theme.colors[0].dark2} ${Theme.colors[0].dark};
         }
         /* Works on Chrome, Edge, and Safari */
         *::-webkit-scrollbar {
             width: 12px;
         }
         *::-webkit-scrollbar-track {
-            background: ${Theme.colors.dark};
+            background: ${Theme.colors[0].dark};
         }
         *::-webkit-scrollbar-thumb {
-            background-color: ${Theme.colors.dark2};
+            background-color: ${Theme.colors[0].dark2};
             border-radius: 20px;
-            border: 3px solid ${Theme.colors.dark};
+            border: 3px solid ${Theme.colors[0].dark};
         }
     `}
     </style>

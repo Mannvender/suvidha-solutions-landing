@@ -26,7 +26,7 @@ const Index = () => {
       sx={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "#253237",
+        backgroundColor: colors.light2,
       }}
     >
       <Parallax pages={3}>
