@@ -29,7 +29,7 @@ const Index = () => {
         backgroundColor: colors.light2,
       }}
     >
-      <Parallax pages={3}>
+      <Parallax pages={4}>
         {/* background colors */}
         <ParallaxLayer
           offset={0}
@@ -79,7 +79,7 @@ const Index = () => {
             backgroundSize: "cover",
           }}
         />
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
+        <ParallaxLayer offset={2} speed={0.8} style={{ opacity: 0.1 }}>
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "55%" }}
@@ -89,7 +89,7 @@ const Index = () => {
             style={{ display: "block", width: "10%", marginLeft: "15%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
+        <ParallaxLayer offset={2.75} speed={0.5} style={{ opacity: 0.1 }}>
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "70%" }}
@@ -99,7 +99,7 @@ const Index = () => {
             style={{ display: "block", width: "20%", marginLeft: "40%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
+        <ParallaxLayer offset={2} speed={0.2} style={{ opacity: 0.2 }}>
           <img
             src={url("cloud")}
             style={{ display: "block", width: "10%", marginLeft: "10%" }}
@@ -109,7 +109,7 @@ const Index = () => {
             style={{ display: "block", width: "20%", marginLeft: "75%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
+        <ParallaxLayer offset={2.6} speed={-0.1} style={{ opacity: 0.4 }}>
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "60%" }}
@@ -123,7 +123,7 @@ const Index = () => {
             style={{ display: "block", width: "10%", marginLeft: "80%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "5%" }}
@@ -144,7 +144,7 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2.5}
+          offset={3.5}
           speed={-0.4}
           style={{
             display: "flex",
@@ -155,7 +155,7 @@ const Index = () => {
         >
           <img src={url("earth")} style={{ width: "60%" }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={-0.3}>
+        <ParallaxLayer offset={3} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -188,13 +188,14 @@ const Index = () => {
             </Heading>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={-0.3}>
+        <ParallaxLayer offset={3} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
               left: "80%",
               top: "50%",
               transform: "translate(-50%,-50%)",
+              display: "flex",
             }}
             height="350px"
             width="230px"
@@ -206,10 +207,22 @@ const Index = () => {
               objectFit="cover"
               quality="70"
             />
+            <Heading
+              textAlign="center"
+              fontSize={[5]}
+              color={colors.primary}
+              width="100%"
+              sx={{
+                position: "absolute",
+                bottom: "-32px",
+              }}
+            >
+              Coder
+            </Heading>
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2}
+          offset={3}
           speed={-0}
           style={{
             display: "flex",
@@ -217,7 +230,7 @@ const Index = () => {
             alignItems: "center",
             justifyContent: "center",
           }}
-          onClick={() => parallax.current.scrollTo(0)}
+          // onClick={() => parallax.current.scrollTo(0)}
         >
           <Heading fontSize={[8]} color={colors.primary}>
             Team
@@ -226,8 +239,8 @@ const Index = () => {
             sx={{
               position: "relative",
             }}
-            height="450px"
-            width="300px"
+            height="350px"
+            width="250px"
           >
             <Image
               src={`/team_1.png`}
@@ -236,6 +249,18 @@ const Index = () => {
               objectFit="cover"
               quality="70"
             />
+            <Heading
+              textAlign="center"
+              fontSize={[5]}
+              color={colors.primary}
+              width="100%"
+              sx={{
+                position: "absolute",
+                bottom: "-45px",
+              }}
+            >
+              Specialist
+            </Heading>
           </Box>
         </ParallaxLayer>
 
@@ -255,6 +280,7 @@ const Index = () => {
             <Banner />
           </Flex>
         </ParallaxLayer>
+
         <ParallaxLayer
           factor={0.2}
           offset={0}
@@ -267,6 +293,7 @@ const Index = () => {
         >
           <Header />
         </ParallaxLayer>
+
         <ParallaxLayer
           factor={1}
           offset={1}
@@ -282,6 +309,24 @@ const Index = () => {
             <Quote />
           </Box>
         </ParallaxLayer>
+
+        <ParallaxLayer
+          factor={1}
+          offset={2}
+          speed={0.1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "5rem 0",
+          }}
+        >
+          <Box>
+            <Quote />
+          </Box>
+        </ParallaxLayer>
+
+        
       </Parallax>
 
       {/* <ParallaxLayer
