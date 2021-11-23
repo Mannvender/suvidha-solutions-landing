@@ -48,6 +48,11 @@ const Index = () => {
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
+        <ParallaxLayer
+          offset={3}
+          speed={1}
+          style={{ backgroundColor: colors.accent5 }}
+        />
         {/* assets */}
         <ParallaxLayer offset={0} speed={1} style={{ pointerEvents: "none" }}>
           <Box
@@ -155,7 +160,7 @@ const Index = () => {
         >
           <img src={url("earth")} style={{ width: "60%" }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={3} speed={-0.3}>
+        <ParallaxLayer offset={3.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -184,11 +189,11 @@ const Index = () => {
                 bottom: "-32px",
               }}
             >
-              Artist
+              Chicorita
             </Heading>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={3} speed={-0.3}>
+        <ParallaxLayer offset={3.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -217,7 +222,7 @@ const Index = () => {
                 bottom: "-32px",
               }}
             >
-              Coder
+              1000101
             </Heading>
           </Box>
         </ParallaxLayer>
@@ -259,7 +264,7 @@ const Index = () => {
                 bottom: "-45px",
               }}
             >
-              Specialist
+              Cheesy
             </Heading>
           </Box>
         </ParallaxLayer>
@@ -322,25 +327,10 @@ const Index = () => {
           }}
         >
           <Box>
-            <Quote />
+            <Roadmap />
           </Box>
         </ParallaxLayer>
-
-        
       </Parallax>
-
-      {/* <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(2)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img src={url("bash")} style={{ width: "40%" }} />
-        </ParallaxLayer> */}
     </Box>
   );
 };

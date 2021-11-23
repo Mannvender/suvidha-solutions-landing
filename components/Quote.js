@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Heading } from "rebass";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
-const StyledSpan = styled.span`
+export const StyledSpan = styled.span`
   color: ${(props) => props.theme.colors.dark2};
 `;
 
