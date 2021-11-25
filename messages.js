@@ -38,7 +38,7 @@ export const ROADMAP = [
     when: 100,
     what: `69 of our Cheetahs will be selected to be a part of the movie Chariot Cheetahs
      - a battle royale movie for being the last champion cheetah charioting among asteroids in hell`,
-    color: "dark",
+    color: "accent1",
   },
 ];
 

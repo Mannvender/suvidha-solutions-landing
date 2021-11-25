@@ -3,7 +3,7 @@ import { Box, Flex, Heading } from "rebass";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
 export const StyledSpan = styled.span`
-  color: ${(props) => props.theme.colors.dark2};
+  color: ${(props) => props.theme.colors.dark1};
 `;
 
 const Quote = () => {
@@ -38,7 +38,7 @@ const Quote = () => {
           fontSize={[3, 5]}
           fontWeight={[fontWeights.bold]}
           marginTop={[1]}
-          color={colors.dark2}
+          color={colors.dark1}
         >
           Boss Lady, <StyledSpan>Designer</StyledSpan>
         </Heading>

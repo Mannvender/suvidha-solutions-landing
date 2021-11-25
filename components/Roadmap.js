@@ -19,7 +19,7 @@ const Roadmap = () => {
             alignItems="center"
             justifyContent="center"
             flexWrap="wrap"
-            bg="rgba(0,0,0,0.72)"
+            bg={colors.dark3}
           >
             <Flex
               flexBasis={["50%"]}

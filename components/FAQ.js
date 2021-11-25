@@ -4,9 +4,9 @@ import styled, { useTheme } from "styled-components";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const StyledFlex = styled(Flex)`
-  color: ${(props) => props.theme.colors.light1};
+  color: ${(props) => props.theme.colors.light3};
   &:hover {
-    color: ${(props) => props.theme.colors.light};
+    color: ${(props) => props.theme.colors.dark2};
   }
 `;
 const FaqsSection = ({ faqs }) => {
@@ -53,7 +53,7 @@ const FaqsSection = ({ faqs }) => {
             p={[4]}
             width="90%"
             sx={{
-              backgroundColor: colors.dark,
+              backgroundColor: colors.dark3,
               cursor: "pointer",
             }}
             mb={[2]}

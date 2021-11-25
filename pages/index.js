@@ -160,7 +160,7 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={4.75}
+          offset={4.55}
           speed={-0.4}
           style={{
             display: "flex",
@@ -193,7 +193,7 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[5]}
-              color={colors.light}
+              color={colors.dark}
               width="100%"
               sx={{
                 position: "absolute",
@@ -226,7 +226,7 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[5]}
-              color={colors.light}
+              color={colors.dark}
               width="100%"
               sx={{
                 position: "absolute",
@@ -268,7 +268,7 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[5]}
-              color={colors.light}
+              color={colors.dark}
               width="100%"
               sx={{
                 position: "absolute",
