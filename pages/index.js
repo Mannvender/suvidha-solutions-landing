@@ -49,12 +49,14 @@ const Index = () => {
         />
         <ParallaxLayer
           offset={2}
+          factor={1.2}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
         <ParallaxLayer
           offset={3}
           speed={1}
+          factor={1.2}
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
@@ -87,7 +89,7 @@ const Index = () => {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={3}
+          factor={3.2}
           style={{
             backgroundImage: url("stars", true),
             backgroundSize: "cover",
@@ -158,7 +160,7 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={4.75}
+          offset={4.55}
           speed={-0.4}
           style={{
             display: "flex",
@@ -191,7 +193,7 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[5]}
-              color={colors.primary}
+              color={colors.dark}
               width="100%"
               sx={{
                 position: "absolute",
@@ -224,7 +226,7 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[5]}
-              color={colors.primary}
+              color={colors.dark}
               width="100%"
               sx={{
                 position: "absolute",
@@ -246,7 +248,7 @@ const Index = () => {
           }}
           // onClick={() => parallax.current.scrollTo(0)}
         >
-          <Heading fontSize={[8]} color={colors.primary}>
+          <Heading fontSize={[8]} color={colors.dark}>
             Team
           </Heading>
           <Box
@@ -266,7 +268,7 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[5]}
-              color={colors.primary}
+              color={colors.dark}
               width="100%"
               sx={{
                 position: "absolute",

@@ -19,22 +19,22 @@ const Roadmap = () => {
             alignItems="center"
             justifyContent="center"
             flexWrap="wrap"
-            bg="rgba(0,0,0,0.72)"
+            bg={colors.dark3}
           >
-            <Box
-              sx={{ position: "relative" }}
-              flexBasis={["40%"]}
+            <Flex
+              flexBasis={["50%"]}
               height="100%"
+              alignItems="center"
+              p={[4]}
+              sx={{
+                backgroundColor: colors[item.color] || item.color,
+              }}
             >
-              <Image
-                src={`/${item.when}_percent.png`}
-                alt={`bender`}
-                layout="fill"
-                objectFit="cover"
-                quality="70"
-              />
-            </Box>
-            <Box flexBasis={["100%", "60%"]} p={[4]}>
+              <Heading textAlign="left" fontSize={[6]} fontWeight={900}>
+                {item.when}%
+              </Heading>
+            </Flex>
+            <Box flexBasis={["100%", "50%"]} p={[4]}>
               <Text
                 fontSize={[2]}
                 fontWeight={[fontWeights.normal]}
