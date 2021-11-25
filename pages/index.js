@@ -7,9 +7,10 @@ import FAQ from "components/FAQ";
 import Mint from "components/Mint";
 import Roadmap from "components/Roadmap";
 import { MINT_DATE, DATE_OPTIONS, FAQS } from "messages";
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
+import { isMobile } from "react-device-detect";
 
 const url = (name, wrap = false) =>
   `${
@@ -42,7 +43,7 @@ const Index = () => {
         backgroundColor: colors.light2,
       }}
     >
-      <Parallax pages={5} ref={parallax}>
+      <Parallax pages={isMobile ? 6 : 5} ref={parallax}>
         {/* background colors */}
         <ParallaxLayer
           offset={0}
@@ -57,19 +58,19 @@ const Index = () => {
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={2}
-          factor={1.2}
+          offset={isMobile ? 2.5 : 2}
+          factor={isMobile ? 2.2 : 1.2}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
         <ParallaxLayer
-          offset={3}
+          offset={isMobile ? 4 : 3}
           speed={1}
           factor={1.2}
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={4}
+          offset={isMobile ? 5 : 4}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
@@ -201,7 +202,7 @@ const Index = () => {
         >
           <img src={url("earth")} style={{ width: "60%" }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -234,7 +235,7 @@ const Index = () => {
             </Heading>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -268,7 +269,7 @@ const Index = () => {
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={4}
+          offset={isMobile ? 5 : 4}
           speed={-0}
           style={{
             display: "flex",
@@ -357,7 +358,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={2}
+          offset={isMobile ? 2.5 : 2}
           speed={0.1}
           style={{
             display: "flex",
@@ -373,7 +374,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={3}
+          offset={isMobile ? 4 : 3}
           speed={0.1}
           style={{
             display: "flex",

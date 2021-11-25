@@ -25,7 +25,8 @@ const Roadmap = () => {
               flexBasis={["100%", "50%"]}
               height={["auto", "100%", "100%"]}
               alignItems="center"
-              p={[4]}
+              px={[4]}
+              py={[4]}
               sx={{
                 backgroundColor: colors[item.color] || item.color,
               }}
