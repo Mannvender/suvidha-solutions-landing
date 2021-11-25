@@ -160,6 +160,36 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
+          offset={2.7}
+          speed={-0.3}
+          factor={2}
+          style={{ pointerEvents: "none" }}
+        >
+          <img
+            src={"./ticket.png"}
+            style={{
+              width: "16%",
+              marginLeft: "75%",
+              transform: "rotate(-25deg)",
+            }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={2.2}
+          speed={1.2}
+          factor={2}
+          style={{ pointerEvents: "none" }}
+        >
+          <img
+            src={"./passport.png"}
+            style={{
+              width: "25%",
+              marginLeft: "-6%",
+              transform: "rotate(70deg)",
+            }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={4.55}
           speed={-0.4}
           style={{

@@ -22,7 +22,7 @@ const Quote = () => {
     >
       <Box sx={{ position: "relative" }} flexBasis={["30%"]} height="300px">
         <Image
-          src={`/julie_mao.jpg`}
+          src={`/you.png`}
           alt={`bender`}
           layout="fill"
           objectFit="cover"
