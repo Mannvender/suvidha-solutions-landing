@@ -22,12 +22,14 @@ const FaqsSection = ({ faqs }) => {
   };
   return (
     <Flex
+      maxWidth="1000px"
       flexDirection="column"
       height={["auto", "auto"]}
       alignItems="center"
       justifyContent="center"
       role="region"
       aria-label="FAQs"
+      px={[4, 4, 0]}
       id="faqs"
       sx={{ position: "relative" }}
     >
@@ -41,7 +43,6 @@ const FaqsSection = ({ faqs }) => {
         FAQs
       </Heading>
       <Flex
-        px={[3, 5]}
         flexWrap="wrap"
         justifyContent="space-around"
         width={["100%"]}
@@ -51,7 +52,7 @@ const FaqsSection = ({ faqs }) => {
           <Box
             key={i}
             p={[4]}
-            width="90%"
+            width="100%"
             sx={{
               backgroundColor: colors.dark3,
               cursor: "pointer",

@@ -64,7 +64,7 @@ const Index = () => {
           style={{ backgroundColor: colors.accent5 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 4 : 3}
+          offset={isMobile ? 4 : 3.1}
           speed={1}
           factor={1.2}
           style={{ backgroundColor: colors.accent4 }}
@@ -90,13 +90,17 @@ const Index = () => {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={3.2}
+          factor={isMobile ? 4.2 : 3.2}
           style={{
             backgroundImage: url("stars", true),
             backgroundSize: "cover",
           }}
         />
-        <ParallaxLayer offset={3} speed={0.8} style={{ opacity: 0.1 }}>
+        <ParallaxLayer
+          offset={isMobile ? 4 : 3}
+          speed={0.8}
+          style={{ opacity: 0.1 }}
+        >
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "55%" }}
@@ -106,7 +110,11 @@ const Index = () => {
             style={{ display: "block", width: "10%", marginLeft: "15%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={3.75} speed={0.5} style={{ opacity: 0.1 }}>
+        <ParallaxLayer
+          offset={isMobile ? 4.75 : 3.75}
+          speed={0.5}
+          style={{ opacity: 0.1 }}
+        >
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "70%" }}
@@ -116,7 +124,11 @@ const Index = () => {
             style={{ display: "block", width: "20%", marginLeft: "40%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={3} speed={0.2} style={{ opacity: 0.2 }}>
+        <ParallaxLayer
+          offset={isMobile ? 4 : 3}
+          speed={0.2}
+          style={{ opacity: 0.2 }}
+        >
           <img
             src={url("cloud")}
             style={{ display: "block", width: "10%", marginLeft: "10%" }}
@@ -126,7 +138,11 @@ const Index = () => {
             style={{ display: "block", width: "20%", marginLeft: "75%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={3.6} speed={-0.1} style={{ opacity: 0.4 }}>
+        <ParallaxLayer
+          offset={isMobile ? 4.6 : 3.6}
+          speed={-0.1}
+          style={{ opacity: 0.4 }}
+        >
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "60%" }}
@@ -140,7 +156,11 @@ const Index = () => {
             style={{ display: "block", width: "10%", marginLeft: "80%" }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={4.6} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer
+          offset={isMobile ? 5.1 : 4.6}
+          speed={0.4}
+          style={{ opacity: 0.6 }}
+        >
           <img
             src={url("cloud")}
             style={{ display: "block", width: "20%", marginLeft: "5%" }}
@@ -151,8 +171,8 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1.225}
-          speed={-0.3}
+          offset={isMobile ? 1.18 : 1.225}
+          speed={isMobile ? -0.2 : -0.3}
           style={{ pointerEvents: "none" }}
         >
           <img
@@ -374,18 +394,15 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={isMobile ? 4 : 3}
+          offset={isMobile ? 4 : 3.1}
           speed={0.1}
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            margin: "5rem 0",
           }}
         >
-          <Box>
-            <FAQ faqs={FAQS} />
-          </Box>
+          <FAQ faqs={FAQS} />
         </ParallaxLayer>
       </Parallax>
     </Box>

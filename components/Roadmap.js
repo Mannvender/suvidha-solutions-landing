@@ -9,7 +9,7 @@ const Roadmap = () => {
   // const { flags } = useFlags();
 
   return (
-    <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 0]}>
+    <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 4, 0]}>
       {ROADMAP.map((item) => {
         return (
           <Flex
