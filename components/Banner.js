@@ -14,19 +14,20 @@ const OutlineHeading = styled(Heading)`
 `;
 const Banner = ({ onCtaClick }) => {
   return (
-    <Flex flexDirection="row" pt={[6]} justifyContent="space-between">
+    <Flex
+      flexDirection="row"
+      pt={[6]}
+      px={[4, 4, 0]}
+      justifyContent="space-between"
+    >
       <Flex flexBasis={["90%"]} flexDirection="column" width={["30vw"]}>
-        <Heading fontSize={[4, 7]} fontWeight={["bold"]} marginBottom={[0]}>
+        <Heading fontSize={[6, 7]} fontWeight={["bold"]} marginBottom={[0]}>
           THE
         </Heading>
-        <OutlineHeading
-          fontSize={[4, 6]}
-          fontWeight={["bold"]}
-          marginBottom={[0]}
-        >
+        <OutlineHeading fontSize={[6]} fontWeight={["bold"]} marginBottom={[0]}>
           SHAPE SHIFTER
         </OutlineHeading>
-        <Heading fontSize={[4, 7]} fontWeight={["bold"]} marginBottom={[5]}>
+        <Heading fontSize={[6, 7]} fontWeight={["bold"]} marginBottom={[5]}>
           CHEETAH
         </Heading>
         <Button onClick={onCtaClick}>FIND MORE</Button>

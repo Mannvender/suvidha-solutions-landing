@@ -32,7 +32,7 @@ const FaqsSection = ({ faqs }) => {
       sx={{ position: "relative" }}
     >
       <Heading
-        fontSize={[4, 8]}
+        fontSize={[5, 8]}
         fontWeight={[600]}
         pt={[4]}
         pb={[4]}
@@ -60,7 +60,7 @@ const FaqsSection = ({ faqs }) => {
             onClick={() => handleClick(i)}
           >
             <StyledFlex justifyContent="space-between">
-              <Text mr={[3]} fontSize={[3]}>
+              <Text mr={[3]} fontSize={[2, 3]}>
                 {faq.question}
               </Text>
               {activeFAQs.includes(i) ? (
@@ -76,7 +76,7 @@ const FaqsSection = ({ faqs }) => {
                 transition: "all 0.4s ease",
               }}
             >
-              <Text mt={[3]} color={colors.primary}>
+              <Text mt={[3]} color={colors.primary} fontSize={[1, 2]}>
                 {faq.answer}
               </Text>
             </Box>

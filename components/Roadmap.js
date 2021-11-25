@@ -9,34 +9,34 @@ const Roadmap = () => {
   // const { flags } = useFlags();
 
   return (
-    <Flex flexWrap="wrap" maxWidth={["1000px"]}>
+    <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 0]}>
       {ROADMAP.map((item) => {
         return (
           <Flex
-            flexBasis={["50%"]}
+            flexBasis={[item.basis || "50%"]}
             margin={["0 0"]}
             flexDirection={["row"]}
-            alignItems="center"
+            alignItems={["flex-start", "center"]}
             justifyContent="center"
             flexWrap="wrap"
             bg={colors.dark3}
           >
             <Flex
-              flexBasis={["50%"]}
-              height="100%"
+              flexBasis={["100%", "50%"]}
+              height={["auto", "100%", "100%"]}
               alignItems="center"
               p={[4]}
               sx={{
                 backgroundColor: colors[item.color] || item.color,
               }}
             >
-              <Heading textAlign="left" fontSize={[6]} fontWeight={900}>
+              <Heading textAlign="left" fontSize={[4, 6]} fontWeight={900}>
                 {item.when}%
               </Heading>
             </Flex>
             <Box flexBasis={["100%", "50%"]} p={[4]}>
               <Text
-                fontSize={[2]}
+                fontSize={[1, 2]}
                 fontWeight={[fontWeights.normal]}
                 marginTop={[1]}
                 color={colors.dark2}

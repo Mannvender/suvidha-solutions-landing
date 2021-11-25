@@ -8,7 +8,7 @@ import Mint from "components/Mint";
 import Roadmap from "components/Roadmap";
 import { MINT_DATE, DATE_OPTIONS, FAQS } from "messages";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import { useTheme } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import Image from "next/image";
 
 const url = (name, wrap = false) =>
@@ -17,6 +17,15 @@ const url = (name, wrap = false) =>
   }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
     wrap ? ")" : ""
   }`;
+const BannerImageContainer = styled(Box)`
+  position: relative;
+  top: 100%;
+  left: 25%;
+  transform: translateY(-620px);
+  @media (min-width: 1000px) {
+    left: 50%;
+  }
+`;
 
 const Index = () => {
   const { colors } = useTheme();
@@ -66,16 +75,7 @@ const Index = () => {
         />
         {/* assets */}
         <ParallaxLayer offset={0} speed={1} style={{ pointerEvents: "none" }}>
-          <Box
-            sx={{
-              position: "relative",
-              top: "100%",
-              left: "50%",
-              transform: "translateY(-620px)",
-            }}
-            height="620px"
-            width="620px"
-          >
+          <BannerImageContainer height="620px" width="620px">
             <Image
               src={`/cheetah_transparent.png`}
               alt={`bender`}
@@ -83,7 +83,7 @@ const Index = () => {
               objectFit="cover"
               quality="70"
             />
-          </Box>
+          </BannerImageContainer>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -168,7 +168,7 @@ const Index = () => {
           <img
             src={"./ticket.png"}
             style={{
-              width: "16%",
+              width: "18%",
               marginLeft: "75%",
               transform: "rotate(-25deg)",
             }}
@@ -210,8 +210,8 @@ const Index = () => {
               transform: "translate(-50%,-50%)",
               display: "flex",
             }}
-            height="350px"
-            width="230px"
+            height={["180px", "350px"]}
+            width={["110px", "230px"]}
           >
             <Image
               src={`/team_2.png`}
@@ -222,7 +222,7 @@ const Index = () => {
             />
             <Heading
               textAlign="center"
-              fontSize={[5]}
+              fontSize={[4, 5]}
               color={colors.dark}
               width="100%"
               sx={{
@@ -243,8 +243,8 @@ const Index = () => {
               transform: "translate(-50%,-50%)",
               display: "flex",
             }}
-            height="350px"
-            width="230px"
+            height={["180px", "350px"]}
+            width={["110px", "230px"]}
           >
             <Image
               src={`/team_3.png`}
@@ -255,7 +255,7 @@ const Index = () => {
             />
             <Heading
               textAlign="center"
-              fontSize={[5]}
+              fontSize={[4, 5]}
               color={colors.dark}
               width="100%"
               sx={{
@@ -276,17 +276,16 @@ const Index = () => {
             alignItems: "center",
             justifyContent: "center",
           }}
-          // onClick={() => parallax.current.scrollTo(0)}
         >
-          <Heading fontSize={[8]} color={colors.dark}>
+          <Heading fontSize={[5, 8]} color={colors.dark}>
             Team
           </Heading>
           <Box
             sx={{
               position: "relative",
             }}
-            height="350px"
-            width="250px"
+            height={["200px", "350px"]}
+            width={["130px", "250px"]}
           >
             <Image
               src={`/team_1.png`}
@@ -297,7 +296,7 @@ const Index = () => {
             />
             <Heading
               textAlign="center"
-              fontSize={[5]}
+              fontSize={[4, 5]}
               color={colors.dark}
               width="100%"
               sx={{

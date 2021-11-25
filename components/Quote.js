@@ -11,7 +11,7 @@ const Quote = () => {
   return (
     <Flex
       maxWidth={["1000px"]}
-      margin={["0 0"]}
+      margin={[4, 4, 0]}
       flexDirection={["row"]}
       alignItems="center"
       justifyContent="center"
@@ -20,7 +20,11 @@ const Quote = () => {
         background: `linear-gradient(90deg, ${colors.accent1} 100%, rgba(0,0,0,0.2) 0%)`,
       }}
     >
-      <Box sx={{ position: "relative" }} flexBasis={["30%"]} height="300px">
+      <Box
+        sx={{ position: "relative" }}
+        flexBasis={["100%", "40%", "30%"]}
+        height={["200px", "300px"]}
+      >
         <Image
           src={`/you.png`}
           alt={`bender`}
@@ -29,8 +33,12 @@ const Quote = () => {
           quality="70"
         />
       </Box>
-      <Box flexBasis={["100%", "70%"]} p={[4]}>
-        <Heading fontSize={[4, 5]} fontWeight={["normal"]} color={colors.dark}>
+      <Box flexBasis={["100%", "60%", "70%"]} p={[4]}>
+        <Heading
+          fontSize={[3, 4, 5]}
+          fontWeight={["normal"]}
+          color={colors.dark}
+        >
           “The Cheating Cheetah has different mood and appearance for different
           people, it shows you what you wanna see... Don't fall for his tricks”
         </Heading>

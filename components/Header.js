@@ -9,9 +9,12 @@ import { LinkExternal as Link } from "components/Links";
 const StyledHeader = styled.nav`
   width: 100%;
   max-width: 1040px;
-  padding: 10px 10px;
+  padding: 20px 24px 0px 10px;
   display: flex;
   flex-direction: row;
+  @media (min-width: 1000px) {
+    padding: 10px 10px;
+  }
   @media (min-width: 1400px) {
     padding: 60px 0;
   }
