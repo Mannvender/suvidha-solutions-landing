@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Heading, Box, Flex, Text } from 'rebass';
-import styled, { useTheme } from 'styled-components';
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import React, { useState } from "react";
+import { Heading, Box, Flex, Text } from "rebass";
+import styled, { useTheme } from "styled-components";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const StyledFlex = styled(Flex)`
   color: ${(props) => props.theme.colors.light1};
@@ -22,45 +22,44 @@ const FaqsSection = ({ faqs }) => {
   };
   return (
     <Flex
-      flexDirection='column'
-      height={['auto', 'auto']}
-      alignItems='center'
-      justifyContent='center'
-      role='region'
-      aria-label='FAQs'
-      id='faqs'
-      
-      sx={{ position: 'relative' }}
+      flexDirection="column"
+      height={["auto", "auto"]}
+      alignItems="center"
+      justifyContent="center"
+      role="region"
+      aria-label="FAQs"
+      id="faqs"
+      sx={{ position: "relative" }}
     >
       <Heading
-        fontSize={[4, 6]}
+        fontSize={[4, 8]}
         fontWeight={[600]}
         pt={[4]}
         pb={[4]}
-        color={colors.light1}
+        color={colors.dark}
       >
         FAQs
       </Heading>
       <Flex
         px={[3, 5]}
-        flexWrap='wrap'
-        justifyContent='space-around'
-        width={['100%']}
+        flexWrap="wrap"
+        justifyContent="space-around"
+        width={["100%"]}
         mb={[5]}
       >
         {faqs.map((faq, i) => (
           <Box
             key={i}
-            p={[3]}
-            width='90%'
+            p={[4]}
+            width="90%"
             sx={{
               backgroundColor: colors.dark,
-              cursor: 'pointer',
+              cursor: "pointer",
             }}
             mb={[2]}
             onClick={() => handleClick(i)}
           >
-            <StyledFlex justifyContent='space-between'>
+            <StyledFlex justifyContent="space-between">
               <Text mr={[3]} fontSize={[3]}>
                 {faq.question}
               </Text>
@@ -71,10 +70,10 @@ const FaqsSection = ({ faqs }) => {
               )}
             </StyledFlex>
             <Box
-              height={activeFAQs.includes(i) ? faq.height : '0px'}
+              height={activeFAQs.includes(i) ? faq.height : "0px"}
               sx={{
-                overflow: 'hidden',
-                transition: 'all 0.4s ease',
+                overflow: "hidden",
+                transition: "all 0.4s ease",
               }}
             >
               <Text mt={[3]} color={colors.primary}>
