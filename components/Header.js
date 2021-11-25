@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Heading, Box } from "rebass";
 import Image from "next/image";
 import styled, { useTheme } from "styled-components";
-import { SiDiscord } from "react-icons/si";
+import { SiDiscord, SiTwitter } from "react-icons/si";
 import NavLink from "next/link";
 import { LinkExternal as Link } from "components/Links";
 
@@ -50,7 +50,15 @@ const Header = () => {
           pl={[3]}
         >
           <Link
-            href="https://discord.gg/"
+            href="https://twitter.com/CheetahsNft"
+            target="_blank"
+            rel="noopener noreferrer"
+            marginRight={[4]}
+          >
+            <SiTwitter fill={colors.light} size="36px" />
+          </Link>
+          <Link
+            href="http://Discord.gg/sgysnJXmA7"
             target="_blank"
             rel="noopener noreferrer"
           >

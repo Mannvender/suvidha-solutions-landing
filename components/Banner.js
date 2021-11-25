@@ -12,7 +12,7 @@ const OutlineHeading = styled(Heading)`
   `};
   -webkit-font-smoothing: antialiased;
 `;
-const Banner = (props) => {
+const Banner = ({ onCtaClick }) => {
   return (
     <Flex flexDirection="row" pt={[6]} justifyContent="space-between">
       <Flex flexBasis={["90%"]} flexDirection="column" width={["30vw"]}>
@@ -29,13 +29,7 @@ const Banner = (props) => {
         <Heading fontSize={[4, 7]} fontWeight={["bold"]} marginBottom={[5]}>
           CHEETAH
         </Heading>
-        <Link
-          href="https://discord.gg/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button>FIND MORE</Button>
-        </Link>
+        <Button onClick={onCtaClick}>FIND MORE</Button>
       </Flex>
     </Flex>
   );
