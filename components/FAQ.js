@@ -51,7 +51,7 @@ const FaqsSection = ({ faqs }) => {
         {faqs.map((faq, i) => (
           <Box
             key={i}
-            p={[3,4]}
+            p={[4]}
             width="100%"
             sx={{
               backgroundColor: colors.dark3,
