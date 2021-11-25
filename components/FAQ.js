@@ -22,17 +22,19 @@ const FaqsSection = ({ faqs }) => {
   };
   return (
     <Flex
+      maxWidth="1000px"
       flexDirection="column"
       height={["auto", "auto"]}
       alignItems="center"
       justifyContent="center"
       role="region"
       aria-label="FAQs"
+      px={[4, 4, 0]}
       id="faqs"
       sx={{ position: "relative" }}
     >
       <Heading
-        fontSize={[4, 8]}
+        fontSize={[5, 8]}
         fontWeight={[600]}
         pt={[4]}
         pb={[4]}
@@ -41,7 +43,6 @@ const FaqsSection = ({ faqs }) => {
         FAQs
       </Heading>
       <Flex
-        px={[3, 5]}
         flexWrap="wrap"
         justifyContent="space-around"
         width={["100%"]}
@@ -51,7 +52,7 @@ const FaqsSection = ({ faqs }) => {
           <Box
             key={i}
             p={[4]}
-            width="90%"
+            width="100%"
             sx={{
               backgroundColor: colors.dark3,
               cursor: "pointer",
@@ -60,7 +61,7 @@ const FaqsSection = ({ faqs }) => {
             onClick={() => handleClick(i)}
           >
             <StyledFlex justifyContent="space-between">
-              <Text mr={[3]} fontSize={[3]}>
+              <Text mr={[3]} fontSize={[2, 3]}>
                 {faq.question}
               </Text>
               {activeFAQs.includes(i) ? (
@@ -76,7 +77,7 @@ const FaqsSection = ({ faqs }) => {
                 transition: "all 0.4s ease",
               }}
             >
-              <Text mt={[3]} color={colors.primary}>
+              <Text mt={[3]} color={colors.primary} fontSize={[1, 2]}>
                 {faq.answer}
               </Text>
             </Box>

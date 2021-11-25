@@ -39,6 +39,7 @@ export const ROADMAP = [
     what: `69 of our Cheetahs will be selected to be a part of the movie Chariot Cheetahs
      - a battle royale movie for being the last champion cheetah charioting among asteroids in hell`,
     color: "accent1",
+    basis: "100%",
   },
 ];
 
@@ -47,7 +48,7 @@ export const FAQS = [
     question: "How to mint a Cheating Cheetah?",
     answer:
       "We will be launching on Sol blockchain, you'll need a solana wallet like phantom or sollet.",
-    height: ["56px", "40px"],
+    height: ["64px", "40px"],
   },
   {
     question: "What is the price of a Cheating Cheetah?",
