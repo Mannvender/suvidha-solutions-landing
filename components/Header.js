@@ -31,6 +31,7 @@ const Header = () => {
               sx={{
                 overflow: "hidden",
                 position: "relative",
+                cursor: "pointer",
               }}
               height="100px"
               width="100px"

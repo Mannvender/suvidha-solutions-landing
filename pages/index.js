@@ -349,7 +349,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={0.2}
-          offset={0}
+          offset={isMobile ? 0 : 0.05}
           speed={1.2}
           style={{
             display: "flex",
