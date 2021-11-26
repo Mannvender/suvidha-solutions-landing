@@ -77,7 +77,7 @@ const FaqsSection = ({ faqs }) => {
                 transition: "all 0.4s ease",
               }}
             >
-              <Text mt={[3]} color={colors.primary} fontSize={[1, 2]}>
+              <Text mt={[3]} color={colors.accent5} fontSize={[1, 2]}>
                 {faq.answer}
               </Text>
             </Box>

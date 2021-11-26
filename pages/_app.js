@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
         <WalletConnectionProvider>
           <Component {...pageProps} />
         </WalletConnectionProvider>
-        <ToastContainer position="top-center" hideProgressBar={true} />
+        <ToastContainer position="top-center" />
       </ThemeProvider>
     </>
   );
