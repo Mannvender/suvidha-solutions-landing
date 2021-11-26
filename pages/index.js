@@ -224,7 +224,23 @@ const Index = () => {
             pointerEvents: "none",
           }}
         >
-          <img src={url("earth")} style={{ width: "60%" }} />
+          {/* <img src={url("earth")} style={{ width: "60%" }} /> */}
+          <Box
+            sx={{
+              position: "relative",
+              transform: "rotate(-90deg)",
+            }}
+            height={["330px", "500px", "1000px"]}
+            width={["330px", "500px", "1000px"]}
+          >
+            <Image
+              src={`/planet.png`}
+              alt={`bender`}
+              layout="fill"
+              objectFit="cover"
+              quality="70"
+            />
+          </Box>
         </ParallaxLayer>
         <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
           <Box
