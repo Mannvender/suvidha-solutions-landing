@@ -58,8 +58,8 @@ const Index = () => {
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 2.5 : 2}
-          factor={isMobile ? 2.2 : 1.2}
+          offset={2}
+          factor={isMobile ? 3.2 : 1.3}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
@@ -171,32 +171,36 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 1.18 : 1.225}
+          offset={isMobile ? 1.22 : 1.33}
           speed={isMobile ? -0.2 : -0.3}
           style={{ pointerEvents: "none" }}
         >
           <img
             src={"./meteor.png"}
-            style={{ width: "30%", marginLeft: "70%" }}
+            style={{
+              width: isMobile ? "40%" : "20%",
+              marginLeft: isMobile ? "60%" : "82%",
+              transform: "rotate(-30deg)",
+            }}
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2.7}
-          speed={-0.3}
+          offset={isMobile ? 3.7 : 2.9}
+          speed={-0.2}
           factor={2}
           style={{ pointerEvents: "none" }}
         >
           <img
             src={"./ticket.png"}
             style={{
-              width: "18%",
-              marginLeft: "75%",
+              width: isMobile ? "35%" : "18%",
+              marginLeft: isMobile ? "58%" : "75%",
               transform: "rotate(-25deg)",
             }}
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2.2}
+          offset={isMobile ? 2.01 : 2.2}
           speed={1.2}
           factor={2}
           style={{ pointerEvents: "none" }}
@@ -204,7 +208,7 @@ const Index = () => {
           <img
             src={"./passport.png"}
             style={{
-              width: "25%",
+              width: isMobile ? "50%" : "25%",
               marginLeft: "-6%",
               transform: "rotate(70deg)",
             }}
@@ -220,7 +224,23 @@ const Index = () => {
             pointerEvents: "none",
           }}
         >
-          <img src={url("earth")} style={{ width: "60%" }} />
+          {/* <img src={url("earth")} style={{ width: "60%" }} /> */}
+          <Box
+            sx={{
+              position: "relative",
+              transform: "rotate(-90deg)",
+            }}
+            height={["330px", "500px", "1000px"]}
+            width={["330px", "500px", "1000px"]}
+          >
+            <Image
+              src={`/planet.png`}
+              alt={`bender`}
+              layout="fill"
+              objectFit="cover"
+              quality="70"
+            />
+          </Box>
         </ParallaxLayer>
         <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
           <Box

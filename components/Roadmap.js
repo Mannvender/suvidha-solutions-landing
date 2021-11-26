@@ -10,10 +10,11 @@ const Roadmap = () => {
 
   return (
     <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 4, 0]}>
-      {ROADMAP.map((item) => {
+      {ROADMAP.map((item, i) => {
         return (
           <Flex
-            flexBasis={[item.basis || "50%"]}
+            key={i}
+            flexBasis={[item.basis || "100%"]}
             margin={["0 0"]}
             flexDirection={["row"]}
             alignItems={["flex-start", "center"]}
@@ -22,7 +23,7 @@ const Roadmap = () => {
             bg={colors.dark3}
           >
             <Flex
-              flexBasis={["100%", "50%"]}
+              flexBasis={["100%", "30%"]}
               height={["auto", "100%", "100%"]}
               alignItems="center"
               px={[4]}
@@ -35,7 +36,7 @@ const Roadmap = () => {
                 {item.when}%
               </Heading>
             </Flex>
-            <Box flexBasis={["100%", "50%"]} p={[4]}>
+            <Box flexBasis={["100%", "70%"]} p={[4]}>
               <Text
                 fontSize={[1, 2]}
                 fontWeight={[fontWeights.normal]}

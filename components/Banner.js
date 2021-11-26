@@ -1,8 +1,8 @@
 import React from "react";
-import { Flex, Heading } from "rebass";
-import styled from "styled-components";
+import { Flex, Heading, Text } from "rebass";
+import styled, { useTheme } from "styled-components";
 import Button from "components/Button";
-import { LinkExternal as Link } from "components/Links";
+import NavLink from "next/link";
 
 const OutlineHeading = styled(Heading)`
   color: ${(props) => props.theme.colors.primary};
@@ -13,6 +13,7 @@ const OutlineHeading = styled(Heading)`
   -webkit-font-smoothing: antialiased;
 `;
 const Banner = ({ onCtaClick }) => {
+  const { colors } = useTheme();
   return (
     <Flex
       flexDirection="row"
@@ -31,6 +32,16 @@ const Banner = ({ onCtaClick }) => {
           CHEETAH
         </Heading>
         <Button onClick={onCtaClick}>FIND MORE</Button>
+        <NavLink href="/">
+          <Text
+            fontSize={[1]}
+            color={colors.light}
+            mt={[5, 3]}
+            sx={{ cursor: "pointer" }}
+          >
+            <small>Don't you dare click the logo!</small>
+          </Text>
+        </NavLink>
       </Flex>
     </Flex>
   );
