@@ -58,8 +58,8 @@ const Index = () => {
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 2.5 : 2}
-          factor={isMobile ? 2.2 : 1.2}
+          offset={2}
+          factor={isMobile ? 3.2 : 1.3}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />

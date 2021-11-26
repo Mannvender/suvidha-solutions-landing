@@ -12,12 +12,12 @@ export const ROADMAP = [
   {
     when: 10,
     what: `Cheetah Community events with prize giveaways!`,
-    color: "accent4",
+    color: "accent5",
   },
   {
-    when: 25,
+    when: 20,
     what: `Collab giveaways with established projects & Art Prints to be mailed to early minters`,
-    color: "accent5",
+    color: "primary",
   },
   {
     when: 40,
@@ -27,18 +27,18 @@ export const ROADMAP = [
   {
     when: 60,
     what: `MerchStop - Is it really a club without some cool Cheetah merch`,
-    color: "primary",
+    color: "accent4",
   },
   {
     when: 80,
     what: `Cheetah Charity co - 69 Sol will be given to a charity of our community's choice`,
-    color: "primary",
+    color: "accent1",
   },
   {
     when: 100,
     what: `69 of our Cheetahs will be selected to be a part of the movie Chariot Cheetahs
      - a battle royale movie for being the last champion cheetah charioting among asteroids in hell`,
-    color: "accent1",
+    color: "primary",
     basis: "100%",
   },
 ];
