@@ -171,32 +171,36 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 1.18 : 1.225}
+          offset={isMobile ? 1.22 : 1.33}
           speed={isMobile ? -0.2 : -0.3}
           style={{ pointerEvents: "none" }}
         >
           <img
             src={"./meteor.png"}
-            style={{ width: "30%", marginLeft: "70%" }}
+            style={{
+              width: isMobile ? "40%" : "20%",
+              marginLeft: isMobile ? "60%" : "82%",
+              transform: "rotate(-30deg)",
+            }}
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2.7}
-          speed={-0.3}
+          offset={isMobile ? 3.7 : 2.9}
+          speed={-0.2}
           factor={2}
           style={{ pointerEvents: "none" }}
         >
           <img
             src={"./ticket.png"}
             style={{
-              width: "18%",
-              marginLeft: "75%",
+              width: isMobile ? "35%" : "18%",
+              marginLeft: isMobile ? "58%" : "75%",
               transform: "rotate(-25deg)",
             }}
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2.2}
+          offset={isMobile ? 2.01 : 2.2}
           speed={1.2}
           factor={2}
           style={{ pointerEvents: "none" }}
@@ -204,7 +208,7 @@ const Index = () => {
           <img
             src={"./passport.png"}
             style={{
-              width: "25%",
+              width: isMobile ? "50%" : "25%",
               marginLeft: "-6%",
               transform: "rotate(70deg)",
             }}
