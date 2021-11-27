@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { Box, Text, Flex } from 'rebass';
 import { useTheme } from 'styled-components';
 import { STORY } from 'messages';
-import Image from "next/image";
+import Image from 'next/image';
 
 const url = (name, wrap = false) =>
   `${
@@ -32,56 +32,37 @@ export default function App() {
               offset={elem.offset}
               speed={1}
               factor={0.8}
-              style={{ 
-                backgroundSize: '50%',
-                position: 'relative',
-              }}
             >
-              <Flex>
+              <Flex alignItems={'center'} justifyContent={'center'}>
                 <Box
-                  width={['40%']}
-                  height={['35%']}
-                  p={[1, 2, 3]}
+                  width={['80vw']}
+                  height={['100vh']}
                   sx={{
-                    position: 'absolute',
-                    top: '30%',
-                    left: elem.left ? '5%' :'auto',
-                    right: !elem.left ? '5%' :'auto',
-                    borderRadius: '10px',
-                    zIndex:'100'
-                  }}
-                >
-                  <Text
-                    fontSize={[2, 3, 4]}
-                    color='white'
-                    textAlign={'center'}
-                    m={['auto']}
-                  >
-                    {elem.statement}
-                  </Text>
-                </Box>
-                <Box
-                  width={['40%']}
-                  height={['80%']}
-                  p={[1, 2, 3]}
-                  sx={{
-                    
-                    position: 'absolute',
-                    top: '4',
-                    left: !elem.left ? '5%' :'auto',
-                    right: elem.left ? '5%' :'auto',
-                    borderRadius: '10px',
-                    zIndex:'100'
+                    position: 'relative',
                   }}
                 >
                   <Image
                     src={elem.src}
                     alt={`bender`}
                     layout='fill'
-                    width='50%'
-                    height='80%'
-                    quality='70'
+                    width='100%'
+                    height='100%'
+                    quality='100'
                   />
+                  <Text
+                    fontSize={[2, 3, 4]}
+                    color='white'
+                    textAlign={'center'}
+                    m={['auto']}
+                    sx={{
+                      position: 'absolute',
+                      bottom:'6',
+                      left:'4',
+                      zIndex:'100'
+                    }}
+                  >
+                    {elem.statement}
+                  </Text>
                 </Box>
               </Flex>
             </ParallaxLayer>
@@ -118,7 +99,7 @@ export default function App() {
           />
         </ParallaxLayer> */}
 
-        <ParallaxLayer offset={0.9} speed={0.8} style={{ opacity: 0.1 }}>
+        {/* <ParallaxLayer offset={0.9} speed={0.8} style={{ opacity: 0.1 }}>
           <img
             src={url('cloud')}
             style={{ display: 'block', width: '20%', marginLeft: '55%' }}
@@ -231,7 +212,7 @@ export default function App() {
             src={url('cloud')}
             style={{ display: 'block', width: '20%', marginLeft: '75%' }}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* <ParallaxLayer
           offset={2.5}
