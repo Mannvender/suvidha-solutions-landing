@@ -72,14 +72,18 @@ const Index = () => {
         <ParallaxLayer
           offset={isMobile ? 5 : 4}
           speed={1}
-          style={{ backgroundColor: colors.accent5 }}
+          style={{
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundImage: "url(./planet_bg.svg)",
+          }}
         />
         {/* assets */}
         <ParallaxLayer offset={0} speed={1} style={{ pointerEvents: "none" }}>
           <BannerImageContainer height="620px" width="620px">
             <Image
               src={`/cheetah_transparent.png`}
-              alt={`bender`}
+              alt={`cheetah`}
               layout="fill"
               objectFit="cover"
               quality="70"
@@ -90,7 +94,7 @@ const Index = () => {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={isMobile ? 4.2 : 3.2}
+          factor={isMobile ? 5 : 4}
           style={{
             backgroundImage: url("stars", true),
             backgroundSize: "cover",
@@ -101,74 +105,120 @@ const Index = () => {
           speed={0.8}
           style={{ opacity: 0.1 }}
         >
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "55%" }}
-          />
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "15%" }}
-          />
+          <Box
+            sx={{
+              position: "relative",
+              marginLeft: "55%",
+              transform: "rotate(-30deg)",
+            }}
+            height={["60px", "120px", "240px"]}
+            width={["50px", "100px", "200px"]}
+          >
+            <Image
+              src={`/asteroid.svg`}
+              alt={`asteroid`}
+              layout="fill"
+              objectFit="cover"
+              quality="80"
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              marginLeft: "5%",
+              transform: "rotate(0deg)",
+            }}
+            height={["50px", "60px", "120px"]}
+            width={["40px", "50px", "100px"]}
+          >
+            <Image
+              src={`/asteroid.svg`}
+              alt={`asteroid`}
+              layout="fill"
+              objectFit="cover"
+              quality="80"
+            />
+          </Box>
         </ParallaxLayer>
         <ParallaxLayer
           offset={isMobile ? 4.75 : 3.75}
           speed={0.5}
           style={{ opacity: 0.1 }}
         >
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "70%" }}
-          />
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "40%" }}
-          />
+          <Box
+            sx={{
+              position: "relative",
+              marginLeft: "70%",
+              transform: "rotate(90deg)",
+            }}
+            height={["89px", "120px", "240px"]}
+            width={["80px", "100px", "200px"]}
+          >
+            <Image
+              src={`/asteroid.svg`}
+              alt={`asteroid`}
+              layout="fill"
+              objectFit="cover"
+              quality="80"
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              marginLeft: "40%",
+              transform: "rotate(45deg)",
+            }}
+            height={["90px", "120px", "240px"]}
+            width={["85px", "100px", "200px"]}
+          >
+            <Image
+              src={`/asteroid.svg`}
+              alt={`asteroid`}
+              layout="fill"
+              objectFit="cover"
+              quality="80"
+            />
+          </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4 : 3}
+          offset={isMobile ? 4 : 2.9}
           speed={0.2}
           style={{ opacity: 0.2 }}
         >
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "10%" }}
-          />
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "75%" }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={isMobile ? 4.6 : 3.6}
-          speed={-0.1}
-          style={{ opacity: 0.4 }}
-        >
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "60%" }}
-          />
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "25%", marginLeft: "30%" }}
-          />
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "80%" }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={isMobile ? 5.1 : 4.6}
-          speed={0.4}
-          style={{ opacity: 0.6 }}
-        >
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "5%" }}
-          />
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "15%", marginLeft: "75%" }}
-          />
+          <Box
+            sx={{
+              position: "relative",
+              marginLeft: "85%",
+              transform: "rotate(120deg)",
+            }}
+            height={["100px", "120px", "240px"]}
+            width={["100px", "100px", "200px"]}
+          >
+            <Image
+              src={`/asteroid.svg`}
+              alt={`asteroid`}
+              layout="fill"
+              objectFit="cover"
+              quality="80"
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              marginLeft: "20%",
+              transform: "rotate(-145deg)",
+            }}
+            height={["100px", "120px", "120px"]}
+            width={["100px", "100px", "100px"]}
+          >
+            <Image
+              src={`/asteroid.svg`}
+              alt={`asteroid`}
+              layout="fill"
+              objectFit="cover"
+              quality="80"
+            />
+          </Box>
         </ParallaxLayer>
         <ParallaxLayer
           offset={isMobile ? 1.22 : 1.33}
@@ -181,6 +231,20 @@ const Index = () => {
               width: isMobile ? "40%" : "20%",
               marginLeft: isMobile ? "60%" : "82%",
               transform: "rotate(-30deg)",
+            }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={isMobile ? 1 : 1}
+          speed={isMobile ? 0.2 : 0.5}
+          style={{ pointerEvents: "none" }}
+        >
+          <img
+            src={"./spaceship.svg"}
+            style={{
+              width: isMobile ? "15%" : "8%",
+              marginLeft: isMobile ? "20%" : "22%",
+              transform: "rotate(-20deg)",
             }}
           />
         </ParallaxLayer>
@@ -215,8 +279,8 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={4.55}
-          speed={-0.4}
+          offset={isMobile ? 4.5 : 4.1}
+          speed={isMobile ? -0.7 : -0.4}
           style={{
             display: "flex",
             alignItems: "center",
@@ -224,21 +288,20 @@ const Index = () => {
             pointerEvents: "none",
           }}
         >
-          {/* <img src={url("earth")} style={{ width: "60%" }} /> */}
           <Box
             sx={{
               position: "relative",
-              transform: "rotate(-90deg)",
+              marginLeft: isMobile ? "35%" : "59%",
             }}
-            height={["330px", "500px", "1000px"]}
-            width={["330px", "500px", "1000px"]}
+            height={["250px", "400px", "500px"]}
+            width={["250px", "400px", "500px"]}
           >
             <Image
-              src={`/planet.png`}
-              alt={`bender`}
+              src={`/planet.svg`}
+              alt={`asteroid`}
               layout="fill"
               objectFit="cover"
-              quality="70"
+              quality="80"
             />
           </Box>
         </ParallaxLayer>
@@ -256,7 +319,7 @@ const Index = () => {
           >
             <Image
               src={`/team_2.png`}
-              alt={`bender`}
+              alt={`chicorita cheetah`}
               layout="fill"
               objectFit="cover"
               quality="70"
@@ -289,7 +352,7 @@ const Index = () => {
           >
             <Image
               src={`/team_3.png`}
-              alt={`bender`}
+              alt={`developer cheetah`}
               layout="fill"
               objectFit="cover"
               quality="70"
@@ -330,7 +393,7 @@ const Index = () => {
           >
             <Image
               src={`/team_1.png`}
-              alt={`bender`}
+              alt={`cheesy cheetah`}
               layout="fill"
               objectFit="cover"
               quality="70"
