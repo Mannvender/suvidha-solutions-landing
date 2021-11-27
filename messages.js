@@ -105,7 +105,7 @@ export const STORY = [
     offset: 3,
     left:false,
     bgColor: '#805E73',
-    src: '/cheetah_transparent.png',
+    src: '/7.jpg',
     statement: 'Cheating Cheetah is capable of changing appearance, mood.',
   },
   {
@@ -129,7 +129,7 @@ export const STORY = [
     offset: 6,
     left:true,
     bgColor: '#87BCDE',
-    src: '/cheetah_transparent.png',
+    src: '/8.jpg',
     statement: 'Will take up a new animal form',
   },
   {
@@ -137,7 +137,7 @@ export const STORY = [
     offset: 7,
     left:false,
     bgColor: '#805E73',
-    src: '/cheetah_transparent.png',
+    src: '/6.png',
     statement: 'Do you have what it takes to capture a Powerful Psycopath, following in his footsteps to gain insight on his plan',
   },
 ];
