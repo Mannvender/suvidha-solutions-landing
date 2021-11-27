@@ -1,5 +1,5 @@
 export const DEFAULT_ERROR_MESSAGE =
-  "Something went wrong! We are looking into it.";
+  'Something went wrong! We are looking into it.';
 
 export const ROADMAP = [
   {
@@ -7,68 +7,137 @@ export const ROADMAP = [
     what: `Passport to cheetahwood - each cheetah member gets exclusive entry
      to the Cheetah Club that provides entry in IP development projects,
       a ticket to the movie, all site only events & more`,
-    color: "accent4",
+    color: 'accent4',
   },
   {
     when: 10,
     what: `Cheetah Community events with prize giveaways!`,
-    color: "accent5",
+    color: 'accent5',
   },
   {
     when: 20,
     what: `Collab giveaways with established projects & Art Prints to be mailed to early minters`,
-    color: "primary",
+    color: 'primary',
   },
   {
     when: 40,
     what: `Website gallery - showcase your cheetah - know your rarity`,
-    color: "accent5",
+    color: 'accent5',
   },
   {
     when: 60,
     what: `MerchStop - Is it really a club without some cool Cheetah merch`,
-    color: "accent4",
+    color: 'accent4',
   },
   {
     when: 80,
     what: `Cheetah Charity co - 69 Sol will be given to a charity of our community's choice`,
-    color: "accent1",
+    color: 'accent1',
   },
   {
     when: 100,
     what: `69 of our Cheetahs will be selected to be a part of the movie Chariot Cheetahs
      - a battle royale movie for being the last champion cheetah charioting among asteroids in hell`,
-    color: "primary",
-    basis: "100%",
+    color: 'primary',
+    basis: '100%',
   },
 ];
 
 export const FAQS = [
   {
-    question: "How to mint a Cheating Cheetah?",
+    question: 'How to mint a Cheating Cheetah?',
     answer:
       "We will be launching on Sol blockchain, you'll need a solana wallet like phantom or sollet.",
-    height: ["64px", "40px"],
+    height: ['64px', '40px'],
   },
   {
-    question: "What is the price of a Cheating Cheetah?",
-    answer: "0.49 Sol during the presale. 0.69 Sol during the public sale.",
-    height: ["56px", "40px"],
+    question: 'What is the price of a Cheating Cheetah?',
+    answer: '0.49 Sol during the presale. 0.69 Sol during the public sale.',
+    height: ['56px', '40px'],
   },
   {
-    question: "What is the total supply?",
-    answer: "2969 CC only. 269 for presale and 2700 for public sale.",
-    height: ["56px", "40px"],
+    question: 'What is the total supply?',
+    answer: '2969 CC only. 269 for presale and 2700 for public sale.',
+    height: ['56px', '40px'],
   },
   {
-    question: "When is the launch?",
-    answer: "Presale: 5th December. Public sale: 6th December.",
-    height: ["56px", "40px"],
+    question: 'When is the launch?',
+    answer: 'Presale: 5th December. Public sale: 6th December.',
+    height: ['56px', '40px'],
   },
   {
-    question: "What is the market place?",
+    question: 'What is the market place?',
     answer:
-      "CCs will be listed on 6th December on MagicEden, DigitalEyes & Alpha.Art",
-    height: ["56px", "40px"],
+      'CCs will be listed on 6th December on MagicEden, DigitalEyes & Alpha.Art',
+    height: ['56px', '40px'],
+  },
+];
+
+export const STORY = [
+  {
+    level: 0,
+    offset: 0.4,
+    left:true,
+    bgColor: '#87BCDE',
+    src: '/meteor.png',
+    statement: 'Cheating Cheetah',
+  },
+  {
+    level: 1,
+    offset: 1,
+    left:false,
+    bgColor: '#805E73',
+    src: '/cheetah_transparent.png',
+    statement:
+      "A race of cunning Cheetah's living on 4th dimension hell of 433 Eros Asteroid",
+  },
+  {
+    level: 2,
+    offset: 1.6,
+    left:true,
+    bgColor: '#87BCDE',
+    src: '/cheetah_transparent.png',
+    statement:
+      'One master of trickery escapes from Eros as Erps collides into Venus',
+  },
+  {
+    level: 3,
+    offset: 2,
+    left:false,
+    bgColor: '#805E73',
+    src: '/cheetah_transparent.png',
+    statement: 'Cheating Cheetah is capable of changing appearance, mood.',
+  },
+  {
+    level: 4,
+    offset: 2.6,
+    left:true,
+    bgColor: '#87BCDE',
+    src: '/cheetah_transparent.png',
+    statement: 'He is here for the crypto treasure',
+  },
+  {
+    level: 5,
+    offset: 3,
+    left:false,
+    bgColor: '#805E73',
+    src: '/cheetah_transparent.png',
+    statement: "Once he gets his hands on the ultimate loot he'll leave for Earth C-69420",
+  },
+  {
+    level: 6,
+    offset: 3.5,
+    left:true,
+    bgColor: '#87BCDE',
+    src: '/cheetah_transparent.png',
+    statement: 'Will take up a new animal form',
+  },
+  {
+    level: 7,
+    offset: 3.9,
+    left:false,
+    bgColor: '#805E73',
+    src: '/cheetah_transparent.png',
+    statement: 'Do you have what it takes to capture a Powerful Psycopath, following in his footsteps to gain insight on his plan',
   },
 ];
