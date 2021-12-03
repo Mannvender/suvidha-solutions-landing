@@ -3,6 +3,7 @@ import { Flex, Heading, Text } from "rebass";
 import styled, { useTheme } from "styled-components";
 import Button from "components/Button";
 import NavLink from "next/link";
+import Mint from "components/Mint";
 
 const OutlineHeading = styled(Heading)`
   color: ${(props) => props.theme.colors.primary};
@@ -32,6 +33,7 @@ const Banner = ({ onCtaClick }) => {
           CHEETAH
         </Heading>
         <Button onClick={onCtaClick}>FIND MORE</Button>
+        <Mint />
         <NavLink href="/">
           <Text
             fontSize={[1]}
