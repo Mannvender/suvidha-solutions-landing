@@ -32,8 +32,10 @@ const Banner = ({ onCtaClick }) => {
         <Heading fontSize={[6, 7]} fontWeight={["bold"]} marginBottom={[5]}>
           CHEETAH
         </Heading>
-        <Button onClick={onCtaClick}>FIND MORE</Button>
-        <Mint />
+        <Flex flexWrap="wrap">
+          <Mint />
+          <Button onClick={onCtaClick}>FIND MORE</Button>
+        </Flex>
         <NavLink href="/">
           <Text
             fontSize={[1]}
