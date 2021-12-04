@@ -237,7 +237,10 @@ const Index = () => {
         <ParallaxLayer
           offset={isMobile ? 1 : 1}
           speed={isMobile ? 0.2 : 0.5}
-          style={{ pointerEvents: "none" }}
+          style={{
+            pointerEvents: "none",
+            marginTop: isMobile ? "-100px" : "-160px",
+          }}
         >
           <img
             src={"./spaceship.svg"}

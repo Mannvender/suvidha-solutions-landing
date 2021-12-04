@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from "rebass";
 import { useState, useEffect } from "react";
-import styled, { useTheme, css} from "styled-components";
+import styled, { useTheme, css } from "styled-components";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import Button from "../Button";
@@ -31,36 +31,19 @@ const connection = new anchor.web3.Connection(rpcHost);
 // const startDateSeed = parseInt(process.env.NEXT_PUBLIC_CANDY_START_DATE, 10);
 const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
-export const IceCss = css`
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.8);
-    filter: blur(10px);
-    z-index: -1;
-  }
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  position: relative;
-`;
 const WalletMultiButton = styled(WalletMultiButtonBase)`
   ${buttonCss}
 `;
 
-const MintSection = ({ ethAddress }) => {
+const MintSection = ({}) => {
   const wallet = useWallet();
   const { colors } = useTheme();
-  const router = useRouter();
 
   const [balance, setBalance] = useState();
+  const isLowBalance = Boolean(balance < 0.5);
   const [isActive, setIsActive] = useState(true); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
-  const [amount, setAmount] = useState(8);
   const [candyMachine, setCandyMachine] = useState();
 
   const handleClick = async () => {
@@ -149,59 +132,37 @@ const MintSection = ({ ethAddress }) => {
       console.log(itemsRemaining, "---remaining");
 
       setIsSoldOut(itemsRemaining === 0);
-      // setStartDate(goLiveDate);
       setCandyMachine(candyMachine);
     })();
   }, [wallet, candyMachineId, connection]);
 
-  // const handleChange = (e) => {
-  //   const value = e.target.value;
-
-  //   if (value.length) {
-  //     const parsedVal = parseInt(value);
-  //     if (parsedVal <= 18 && parsedVal > 0) {
-  //       setAmount(parsedVal);
-  //     } else {
-  //       toast.error("Amount should be between 1 and 18.");
-  //     }
-  //   } else {
-  //     setAmount(value);
-  //   }
-  // };
-
   return (
-    <Box p={[3]} mt={[4]}>
-      <Flex justifyContent="center" textAlign="center" mb={[3]}>
-        <main>
-          {wallet.connected && (
-            <Text fontSize={[4]} color={colors.light1} mb={[3]}>
-              Balance: {(balance || 0).toLocaleString()} SOL
-            </Text>
-          )}
-
-          <WalletMultiButton />
-          <>
-            {wallet.connected && (
-              <Button
-                disabled={isSoldOut || isMinting || !isActive}
-                style={{ width: "100%" }}
-                color={colors.light}
-                onClick={handleClick}
-                disabled={!Boolean(amount)}
-              >
-                {isSoldOut
-                  ? "Sold Out"
-                  : isActive
-                  ? isMinting
-                    ? "Minting..."
-                    : "Mint"
-                  : "Not active"}
-              </Button>
-            )}
-          </>
-        </main>
-      </Flex>
-    </Box>
+    <>
+      <Box marginRight="1em" marginBottom="1em">
+        <WalletMultiButton primary />
+      </Box>
+      <>
+        {wallet.connected && (
+          <Button
+            disabled={isSoldOut || isMinting || !isActive}
+            style={{ width: "100%", marginBottom: "1rem" }}
+            color={colors.light}
+            onClick={handleClick}
+            primary
+          >
+            {isSoldOut
+              ? "Sold Out"
+              : isActive
+              ? isMinting
+                ? "Minting..."
+                : isLowBalance
+                ? "Low Balance"
+                : "Mint"
+              : "Not active"}
+          </Button>
+        )}
+      </>
+    </>
   );
 };
 
