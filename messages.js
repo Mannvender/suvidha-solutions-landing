@@ -62,7 +62,7 @@ export const FAQS = [
   },
   {
     question: 'When is the launch?',
-    answer: 'Presale: 5th December. Public sale: 6th December.',
+    answer: 'Somewhere in December.',
     height: ['56px', '40px'],
   },
   {
