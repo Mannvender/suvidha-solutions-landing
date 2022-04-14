@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider
         theme={{
           ...theme,
-          colors: theme.colors[getRandomInt(0, theme.colors.length - 1)],
+          colors: theme.colors[0 && getRandomInt(0, theme.colors.length - 1)],
         }}
       >
         <Component {...pageProps} />

@@ -19,14 +19,14 @@ export default class MyDocument extends Document {
     <Html lang="en">
       <Head>
         {/* <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> */}
-        <meta name="title" content="Cheating Cheetahs" />
+        <meta name="title" content="Suvidha Solutions" />
         <meta
           name="description"
-          content="Shape-shifter Cheetah from 4th dimension hell of 433 Eros."
+          content="We are an IT consulting firm offering custom software development service that includes UI designing, software development, and QA services."
         />
         <meta
           name="keywords"
-          content="cheating,cheetahs,nft,digital,art,block,chain,community,cheating-cheetahs,giveaway,phantom,wallet,connect,solana,sol,metaplex,candy-machine"
+          content="suvidha,solutions,suvidha solutions,india,indian,I.T,Consultancy,software,development,service,IT"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,7 +52,7 @@ export default class MyDocument extends Document {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Roboto:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?familty=lato:wght@400;700&family=League+Gothic:wght@400&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
         <link

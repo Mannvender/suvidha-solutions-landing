@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Heading, Box } from "rebass";
 import Image from "next/image";
 import styled, { useTheme } from "styled-components";
-import { SiDiscord, SiTwitter } from "react-icons/si";
+import { SiDiscord, SiTwitter, SiFacebook, SiLinkedin } from "react-icons/si";
 import NavLink from "next/link";
 import { LinkExternal as Link } from "components/Links";
 
@@ -33,16 +33,16 @@ const Header = () => {
                 position: "relative",
                 cursor: "pointer",
               }}
-              height="100px"
-              width="100px"
+              height="250px"
+              width="250px"
               mb={[3, 0]}
             >
               <Image
-                src={`/logo.png`}
-                alt={`bender`}
+                src={`/logos/transparent.png`}
+                alt={`logo`}
                 layout="fill"
                 objectFit="cover"
-                quality="70"
+                quality="100"
               />
             </Box>
           </NavLink>
@@ -54,19 +54,35 @@ const Header = () => {
           pl={[3]}
         >
           <Link
-            href="https://twitter.com/CheetahsNft"
+            href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
-            marginRight={[4]}
+            marginRight={[3]}
           >
-            <SiTwitter fill={colors.light} size="36px" />
+            <SiTwitter fill={colors.light} size="30px" />
           </Link>
           <Link
-            href="http://Discord.gg/sgysnJXmA7"
+            href="http://Discord.gg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            marginRight={[3]}
+          >
+            <SiDiscord fill={colors.light} size="30px" />
+          </Link>
+          <Link
+            href="http://fb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            marginRight={[3]}
+          >
+            <SiFacebook fill={colors.light} size="30px" />
+          </Link>
+          <Link
+            href="http://linkedin.com/in/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiDiscord fill={colors.light} size="36px" />
+            <SiLinkedin fill={colors.light} size="30px" />
           </Link>
         </Flex>
       </StyledHeader>

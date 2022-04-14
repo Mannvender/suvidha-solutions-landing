@@ -22,28 +22,24 @@ const Banner = ({ onCtaClick }) => {
       justifyContent="space-between"
     >
       <Flex flexBasis={["90%"]} flexDirection="column" width={["30vw"]}>
-        <Heading fontSize={[6, 7]} fontWeight={["bold"]} marginBottom={[0]}>
-          THE
+        <Heading
+          fontSize={[6, 7]}
+          fontWeight={["bold"]}
+          marginBottom={[2]}
+          letterSpacing="2px"
+        >
+          Quality digital service you really want !
         </Heading>
-        <OutlineHeading fontSize={[6]} fontWeight={["bold"]} marginBottom={[0]}>
-          SHAPE SHIFTER
-        </OutlineHeading>
-        <Heading fontSize={[6, 7]} fontWeight={["bold"]} marginBottom={[5]}>
-          CHEETAH
-        </Heading>
+        <Text mr={[3]} fontSize={[1, 2]} mb={[4]}>
+          We are delivering top level digital services with our best experienced
+          team, just get started with us.
+        </Text>
+        {/* <OutlineHeading fontSize={[6]} fontWeight={["bold"]} marginBottom={[0]}>
+          You really want
+        </OutlineHeading> */}
         <Flex flexWrap="wrap">
-          <Button onClick={onCtaClick}>FIND MORE</Button>
+          <Button onClick={onCtaClick}>Get Stated</Button>
         </Flex>
-        <NavLink href="/">
-          <Text
-            fontSize={[1]}
-            color={colors.light}
-            mt={[5, 3]}
-            sx={{ cursor: "pointer" }}
-          >
-            <small>Don't you dare click the logo!</small>
-          </Text>
-        </NavLink>
       </Flex>
     </Flex>
   );

@@ -9,7 +9,6 @@ export const buttonCss = css`
   border-radius: 0px;
   max-width: 200px;
   min-width: 200px;
-  text-transform: uppercase;
   font-size: 1rem;
   padding: 1rem 0rem;
   pointer-events: auto;

@@ -1,8 +1,8 @@
 const errorColor = "#ED4337";
 export default {
   fonts: {
-    heading: "Oswald, serif",
-    body: "Roboto, sans-serif",
+    heading: "League Gothic, sans-serif",
+    body: "Lato, sans-serif",
   },
   colors: [
     {

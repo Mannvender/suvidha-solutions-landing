@@ -81,7 +81,7 @@ const Index = () => {
         <ParallaxLayer offset={0} speed={1} style={{ pointerEvents: "none" }}>
           <BannerImageContainer height="620px" width="620px">
             <Image
-              src={`/cheetah_transparent.png`}
+              src={`/banner_04.png`}
               alt={`cheetah`}
               layout="fill"
               objectFit="cover"
@@ -418,7 +418,7 @@ const Index = () => {
         {/* Various Sections */}
         <ParallaxLayer
           factor={1}
-          offset={0}
+          offset={0.1}
           speed={0.1}
           style={{
             display: "flex",
