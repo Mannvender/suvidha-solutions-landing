@@ -1,22 +1,11 @@
 import App from "next/app";
-import dynamic from "next/dynamic";
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import Head from "next/head";
 import { ToastContainer as ToastContainerBase } from "react-toastify";
-import { configure } from "@happykit/flags/config";
 import "react-toastify/dist/ReactToastify.min.css";
-const WalletConnectionProvider = dynamic(
-  () => import("components/WalletConnectionProvider"),
-  {
-    ssr: false,
-  }
-);
 
 import theme from "../styles/theme";
-configure({
-  envKey: process.env.NEXT_PUBLIC_FLAGS_ENVIRONMENT_KEY,
-});
 
 const ToastContainer = styled(ToastContainerBase).attrs({
   // custom props
@@ -48,9 +37,7 @@ function MyApp({ Component, pageProps }) {
           colors: theme.colors[getRandomInt(0, theme.colors.length - 1)],
         }}
       >
-        <WalletConnectionProvider>
-          <Component {...pageProps} />
-        </WalletConnectionProvider>
+        <Component {...pageProps} />
         <ToastContainer position="top-center" />
       </ThemeProvider>
     </>

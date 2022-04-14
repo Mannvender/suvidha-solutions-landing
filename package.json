@@ -1,5 +1,5 @@
 {
-  "name": "sol-games-website",
+  "name": "suvidha-solutions-landing",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -12,18 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@happykit/flags": "^1.1.0",
-    "@project-serum/anchor": "^0.16.1",
     "@react-spring/parallax": "^9.3.0",
     "@sentry/browser": "^6.13.3",
     "@sentry/nextjs": "^6.12.0",
-    "@solana/spl-token": "^0.1.8",
-    "@solana/wallet-adapter-base": "^0.6.0",
-    "@solana/wallet-adapter-react": "^0.12.0",
-    "@solana/wallet-adapter-react-ui": "^0.4.1",
-    "@solana/wallet-adapter-wallets": "^0.10.0",
-    "@solana/web3.js": "^1.28.0",
-    "@walletconnect/web3-provider": "^1.4.1",
     "intersection-observer": "^0.12.0",
     "next": "11.1.2",
     "react": "^17.0.2",
@@ -35,8 +26,7 @@
     "react-spring": "^9.3.0",
     "react-toastify": "^7.0.4",
     "rebass": "^4.0.7",
-    "styled-components": "^5.2.1",
-    "web3": "^1.5.2"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "next-transpile-modules": "^8.0.0",

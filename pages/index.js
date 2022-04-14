@@ -4,13 +4,12 @@ import Header from "components/Header";
 import Banner from "components/Banner";
 import Quote from "components/Quote";
 import FAQ from "components/FAQ";
-import Mint from "components/Mint";
 import Roadmap from "components/Roadmap";
-import { MINT_DATE, DATE_OPTIONS, FAQS } from "messages";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
+import { FAQS } from "messages";
 
 const url = (name, wrap = false) =>
   `${
