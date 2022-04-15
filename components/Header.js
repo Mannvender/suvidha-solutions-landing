@@ -5,11 +5,12 @@ import styled, { useTheme } from "styled-components";
 import { SiDiscord, SiTwitter, SiFacebook, SiLinkedin } from "react-icons/si";
 import NavLink from "next/link";
 import { LinkExternal as Link } from "components/Links";
+import { isMobile } from "react-device-detect";
 
 const StyledHeader = styled.nav`
   width: 100%;
   max-width: 1040px;
-  padding: 20px 24px 0px 10px;
+  padding: 0px 24px 0px 10px;
   display: flex;
   flex-direction: row;
   @media (min-width: 1000px) {
@@ -59,7 +60,7 @@ const Header = () => {
             rel="noopener noreferrer"
             marginRight={[3]}
           >
-            <SiTwitter fill={colors.light} size="30px" />
+            <SiTwitter fill={colors.light} size={isMobile ? "20px" : "28px"} />
           </Link>
           <Link
             href="http://Discord.gg/"
@@ -67,7 +68,7 @@ const Header = () => {
             rel="noopener noreferrer"
             marginRight={[3]}
           >
-            <SiDiscord fill={colors.light} size="30px" />
+            <SiDiscord fill={colors.light} size={isMobile ? "20px" : "28px"} />
           </Link>
           <Link
             href="http://fb.com/"
@@ -75,14 +76,14 @@ const Header = () => {
             rel="noopener noreferrer"
             marginRight={[3]}
           >
-            <SiFacebook fill={colors.light} size="30px" />
+            <SiFacebook fill={colors.light} size={isMobile ? "20px" : "28px"} />
           </Link>
           <Link
             href="http://linkedin.com/in/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiLinkedin fill={colors.light} size="30px" />
+            <SiLinkedin fill={colors.light} size={isMobile ? "20px" : "27px"} />
           </Link>
         </Flex>
       </StyledHeader>
