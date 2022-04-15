@@ -14,7 +14,10 @@ const Footer = () => {
   const { colors } = useTheme();
   return (
     <StyledFooter>
-      <Text color={colors.dark2}>SHAPE SHIFTING NFTs</Text>
+      <Text color={colors.dark2}>
+        PNG Designed By 千图网 from
+        https://pngtree.com/freepng/financial-management-mobile-banking-revenue_5780265.html?sol=downref&id=bef
+      </Text>
     </StyledFooter>
   );
 };

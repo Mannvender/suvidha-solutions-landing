@@ -4,7 +4,7 @@ import Header from "components/Header";
 import Banner from "components/Banner";
 import Quote from "components/Quote";
 import FAQ from "components/FAQ";
-import Roadmap from "components/Roadmap";
+import Services from "components/Services";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
@@ -434,7 +434,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={0.2}
-          offset={isMobile ? 0 : 0.05}
+          offset={0}
           speed={1.2}
           style={{
             display: "flex",
@@ -473,7 +473,7 @@ const Index = () => {
           }}
         >
           <Box>
-            <Roadmap />
+            <Services />
           </Box>
         </ParallaxLayer>
 

@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Cheating Cheetahs</title>
+        <title>Suvidha Solutions</title>
       </Head>
       <ThemeProvider
         theme={{

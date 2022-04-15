@@ -26,10 +26,11 @@ const Quote = () => {
         height={["250px", "300px"]}
       >
         <Image
-          src={`/you.png`}
+          src={`/motivational.jpg`}
           alt={`bender`}
           layout="fill"
           objectFit="cover"
+          objectPosition={`0% 50%`}
           quality="70"
         />
       </Box>
@@ -39,8 +40,8 @@ const Quote = () => {
           fontWeight={["normal"]}
           color={colors.dark}
         >
-          “The Cheating Cheetah has different mood and appearance for different
-          people, it shows you what you wanna see... Don't fall for his tricks”
+          “Great companies don't hire skilled people and motivate them, they
+          hire already motivated people and inspire them.”
         </Heading>
         <Heading
           fontSize={[3, 5]}
@@ -48,7 +49,7 @@ const Quote = () => {
           marginTop={[1]}
           color={colors.dark1}
         >
-          Boss Lady, <StyledSpan>Designer</StyledSpan>
+          Simon Sinek, <StyledSpan>Start with Why</StyledSpan>
         </Heading>
       </Box>
     </Flex>
