@@ -54,7 +54,7 @@ const Roadmap = () => {
                     sx={{
                       display: "inline-block",
                       color: "white",
-                      backgroundColor: colors.accent4,
+                      backgroundColor: colors.primary,
                       px: 2,
                       py: 1,
                       mr: 3,
