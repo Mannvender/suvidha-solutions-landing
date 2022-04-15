@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading } from "rebass";
+import { Box, Flex, Heading, Text } from "rebass";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
 export const StyledSpan = styled.span`
@@ -39,18 +39,14 @@ const Quote = () => {
           fontSize={[3, 4, 5]}
           fontWeight={["normal"]}
           color={colors.dark}
+          mb={[3]}
         >
           “Great companies don't hire skilled people and motivate them, they
           hire already motivated people and inspire them.”
         </Heading>
-        <Heading
-          fontSize={[3, 5]}
-          fontWeight={[fontWeights.bold]}
-          marginTop={[1]}
-          color={colors.dark1}
-        >
+        <Text fontSize={[3, 4]} marginTop={[1]} color={colors.dark1}>
           Simon Sinek, <StyledSpan>Start with Why</StyledSpan>
-        </Heading>
+        </Text>
       </Box>
     </Flex>
   );

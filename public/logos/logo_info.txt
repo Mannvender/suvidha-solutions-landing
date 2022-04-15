@@ -1,7 +1,7 @@
 
-            Fonts used: LeagueGothic-Italic,Lato-Bold 
+            Fonts used: AbrilFatface-Regular,CantataOne-Regular 
 
-            Colors used: 77BB3F,F7F7F6  
+            Colors used: 14274E,ECE7E2  
 
               
         

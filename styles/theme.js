@@ -1,8 +1,8 @@
 const errorColor = "#ED4337";
 export default {
   fonts: {
-    heading: "League Gothic, sans-serif",
-    body: "Lato, sans-serif",
+    heading: "Abril Fatface, cursive",
+    body: "Cantata One, serif",
   },
   colors: [
     {

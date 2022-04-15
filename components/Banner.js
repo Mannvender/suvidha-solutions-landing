@@ -18,7 +18,7 @@ const Banner = ({ onCtaClick }) => {
         width={["50vw", "50vw", "30vw"]}
       >
         <Heading
-          fontSize={[6, 7]}
+          fontSize={[5, 6, 7]}
           fontWeight={["bold"]}
           marginBottom={[2]}
           letterSpacing={2}
