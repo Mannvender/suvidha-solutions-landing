@@ -38,7 +38,7 @@ const Banner = ({ onCtaClick }) => {
           You really want
         </OutlineHeading> */}
         <Flex flexWrap="wrap">
-          <Button onClick={onCtaClick}>Get Stated</Button>
+          <Button onClick={onCtaClick}>Get in touch</Button>
         </Flex>
       </Flex>
     </Flex>

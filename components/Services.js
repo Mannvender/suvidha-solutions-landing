@@ -1,12 +1,10 @@
 import React from "react";
-import { Box, Flex, Heading, Card, Text } from "rebass";
+import { Box, Flex, Heading, Text } from "rebass";
 import { useTheme } from "styled-components";
-import Image from "next/image";
-import { ROADMAP } from "messages";
+import { SERVICES } from "messages";
 
 const Roadmap = () => {
   const { colors, fontWeights } = useTheme();
-  // const { flags } = useFlags();
 
   return (
     <>
@@ -21,7 +19,7 @@ const Roadmap = () => {
         Save time managing your business with our services
       </Heading>
       <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 4, 0]}>
-        {ROADMAP.map((item, i) => {
+        {SERVICES.map((item, i) => {
           return (
             <Flex
               key={i}

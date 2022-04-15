@@ -3,13 +3,12 @@ import { Box, Flex, Heading } from "rebass";
 import Header from "components/Header";
 import Banner from "components/Banner";
 import Quote from "components/Quote";
-import FAQ from "components/FAQ";
+import Contact, { StyledFlex } from "components/Contact";
 import Services from "components/Services";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
-import { FAQS } from "messages";
 
 const url = (name, wrap = false) =>
   `${
@@ -31,7 +30,7 @@ const Index = () => {
   const { colors } = useTheme();
   const parallax = useRef(null);
   const handleFindMore = () => {
-    parallax?.current?.scrollTo(1);
+    parallax?.current?.scrollTo(4);
   };
   return (
     <Box
@@ -42,7 +41,7 @@ const Index = () => {
         backgroundColor: colors.light2,
       }}
     >
-      <Parallax pages={isMobile ? 6 : 5} ref={parallax}>
+      <Parallax pages={isMobile ? 5 : 5} ref={parallax}>
         {/* background colors */}
         <ParallaxLayer
           offset={0}
@@ -58,18 +57,18 @@ const Index = () => {
         />
         <ParallaxLayer
           offset={2}
-          factor={isMobile ? 3.2 : 1.3}
+          factor={isMobile ? 1 : 1}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 4 : 3.1}
+          offset={isMobile ? 3 : 3}
           speed={1}
           factor={1.2}
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 5 : 4}
+          offset={isMobile ? 4 : 4}
           speed={1}
           style={{
             backgroundSize: "cover",
@@ -82,7 +81,7 @@ const Index = () => {
           <BannerImageContainer height="620px" width="620px">
             <Image
               src={`/banner_04.png`}
-              alt={`cheetah`}
+              alt={`banner`}
               layout="fill"
               objectFit="cover"
               quality="70"
@@ -93,14 +92,14 @@ const Index = () => {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={isMobile ? 5 : 4}
+          factor={isMobile ? 4 : 4}
           style={{
             backgroundImage: url("stars", true),
             backgroundSize: "cover",
           }}
         />
         <ParallaxLayer
-          offset={isMobile ? 4 : 3}
+          offset={isMobile ? 3 : 3}
           speed={0.8}
           style={{ opacity: 0.1 }}
         >
@@ -140,7 +139,7 @@ const Index = () => {
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4.75 : 3.75}
+          offset={isMobile ? 3.75 : 3.75}
           speed={0.5}
           style={{ opacity: 0.1 }}
         >
@@ -180,7 +179,7 @@ const Index = () => {
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4 : 2.9}
+          offset={isMobile ? 2.9 : 2.9}
           speed={0.2}
           style={{ opacity: 0.2 }}
         >
@@ -220,20 +219,6 @@ const Index = () => {
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 1.22 : 1.33}
-          speed={isMobile ? -0.2 : -0.3}
-          style={{ pointerEvents: "none" }}
-        >
-          <img
-            src={"./meteor.png"}
-            style={{
-              width: isMobile ? "40%" : "20%",
-              marginLeft: isMobile ? "60%" : "82%",
-              transform: "rotate(-30deg)",
-            }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
           offset={isMobile ? 1 : 1}
           speed={isMobile ? 0.2 : 0.5}
           style={{
@@ -251,37 +236,22 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 3.7 : 2.9}
-          speed={-0.2}
-          factor={2}
-          style={{ pointerEvents: "none" }}
-        >
-          <img
-            src={"./ticket.png"}
-            style={{
-              width: isMobile ? "35%" : "18%",
-              marginLeft: isMobile ? "58%" : "75%",
-              transform: "rotate(-25deg)",
-            }}
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
           offset={isMobile ? 2.01 : 2.2}
           speed={1.2}
           factor={2}
           style={{ pointerEvents: "none" }}
         >
           <img
-            src={"./passport.png"}
+            src={"./satellite.svg"}
             style={{
-              width: isMobile ? "50%" : "25%",
-              marginLeft: "-6%",
+              width: isMobile ? "15%" : "25%",
+              marginLeft: "70%",
               transform: "rotate(70deg)",
             }}
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4.5 : 4.1}
+          offset={isMobile ? 4.3 : 4.3}
           speed={isMobile ? -0.7 : -0.4}
           style={{
             display: "flex",
@@ -307,7 +277,7 @@ const Index = () => {
             />
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 4.1 : 4.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -317,30 +287,33 @@ const Index = () => {
               display: "flex",
             }}
             height={["180px", "350px"]}
-            width={["110px", "230px"]}
+            width={["110px", "250px"]}
           >
             <Image
-              src={`/team_2.png`}
-              alt={`chicorita cheetah`}
+              src={`/mannvender.jpg`}
+              alt={`Mannvender`}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               quality="70"
             />
             <Heading
               textAlign="center"
               fontSize={[4, 5]}
-              color={colors.dark}
+              color={colors.light}
               width="100%"
               sx={{
                 position: "absolute",
                 bottom: "-32px",
+                backgroundColor: colors.dark3,
+                paddingY: 1,
               }}
+              letterSpacing={2}
             >
-              Chicorita
+              Mannvender
             </Heading>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 4.1 : 4.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -353,28 +326,31 @@ const Index = () => {
             width={["110px", "230px"]}
           >
             <Image
-              src={`/team_3.png`}
-              alt={`developer cheetah`}
+              src={`/third.jpg`}
+              alt={`developer`}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               quality="70"
             />
             <Heading
               textAlign="center"
               fontSize={[4, 5]}
-              color={colors.dark}
+              color={colors.light}
               width="100%"
               sx={{
                 position: "absolute",
                 bottom: "-32px",
+                backgroundColor: colors.dark3,
+                paddingY: 1,
               }}
+              letterSpacing={2}
             >
               1000101
             </Heading>
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 5 : 4}
+          offset={isMobile ? 4 : 4}
           speed={-0}
           style={{
             display: "flex",
@@ -383,7 +359,7 @@ const Index = () => {
             justifyContent: "center",
           }}
         >
-          <Heading fontSize={[5, 8]} color={colors.dark}>
+          <Heading fontSize={[5, 7]} color={colors.light}>
             Team
           </Heading>
           <Box
@@ -394,23 +370,26 @@ const Index = () => {
             width={["130px", "250px"]}
           >
             <Image
-              src={`/team_1.png`}
-              alt={`cheesy cheetah`}
+              src={`/naresh.jpg`}
+              alt={`Naresh`}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               quality="70"
             />
             <Heading
               textAlign="center"
               fontSize={[4, 5]}
-              color={colors.dark}
+              letterSpacing={2}
+              color={colors.light}
               width="100%"
               sx={{
                 position: "absolute",
                 bottom: "-45px",
+                backgroundColor: colors.dark3,
+                paddingY: 1,
               }}
             >
-              Cheesy
+              Naresh Dalal
             </Heading>
           </Box>
         </ParallaxLayer>
@@ -463,7 +442,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={isMobile ? 2.5 : 2}
+          offset={isMobile ? 2 : 2}
           speed={0.1}
           style={{
             display: "flex",
@@ -479,7 +458,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={isMobile ? 4 : 3.1}
+          offset={isMobile ? 3 : 3}
           speed={0.1}
           style={{
             display: "flex",
@@ -487,7 +466,7 @@ const Index = () => {
             justifyContent: "center",
           }}
         >
-          <FAQ faqs={FAQS} />
+          <Contact />
         </ParallaxLayer>
       </Parallax>
     </Box>
