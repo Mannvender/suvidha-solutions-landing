@@ -3,7 +3,7 @@ import { Box, Flex, Heading } from "rebass";
 import Header from "components/Header";
 import Banner from "components/Banner";
 import Quote from "components/Quote";
-import Contact, { StyledFlex } from "components/Contact";
+import Contact from "components/Contact";
 import Services from "components/Services";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styled, { useTheme } from "styled-components";
@@ -19,7 +19,7 @@ const url = (name, wrap = false) =>
 const BannerImageContainer = styled(Box)`
   position: relative;
   top: 100%;
-  left: 25%;
+  left: 35%;
   transform: translateY(-620px);
   @media (min-width: 1000px) {
     left: 50%;
@@ -41,7 +41,7 @@ const Index = () => {
         backgroundColor: colors.light2,
       }}
     >
-      <Parallax pages={isMobile ? 5 : 5} ref={parallax}>
+      <Parallax pages={isMobile ? 6 : 5} ref={parallax}>
         {/* background colors */}
         <ParallaxLayer
           offset={0}
@@ -56,19 +56,19 @@ const Index = () => {
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={2}
-          factor={isMobile ? 1 : 1}
+          offset={isMobile ? 2 : 2}
+          factor={isMobile ? 2.5 : 1}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 3 : 3}
+          offset={isMobile ? 4 : 3}
           speed={1}
           factor={1.2}
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 4 : 4}
+          offset={isMobile ? 5 : 4}
           speed={1}
           style={{
             backgroundSize: "cover",
@@ -277,7 +277,7 @@ const Index = () => {
             />
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 4.1 : 4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -313,7 +313,7 @@ const Index = () => {
             </Heading>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 4.1 : 4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -350,7 +350,7 @@ const Index = () => {
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4 : 4}
+          offset={isMobile ? 5 : 4}
           speed={-0}
           style={{
             display: "flex",
@@ -441,7 +441,7 @@ const Index = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          factor={1}
+          factor={isMobile ? 1.5 : 1}
           offset={isMobile ? 2 : 2}
           speed={0.1}
           style={{
@@ -458,7 +458,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={isMobile ? 3 : 3}
+          offset={isMobile ? 4 : 3}
           speed={0.1}
           style={{
             display: "flex",

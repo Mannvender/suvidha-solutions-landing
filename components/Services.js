@@ -18,7 +18,7 @@ const Roadmap = () => {
       >
         Save time managing your business with our services
       </Heading>
-      <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 4, 0]}>
+      <Flex flexWrap="wrap" maxWidth={["1000px"]} m={[4, 4, 4, 0]}>
         {SERVICES.map((item, i) => {
           return (
             <Flex
@@ -46,7 +46,7 @@ const Roadmap = () => {
                 </Heading>
               </Flex>
               <Box flexBasis={["100%", "70%"]} p={[4]}>
-                <Heading letterSpacing={2} fontSize={[5]} mb={[3]}>
+                <Heading letterSpacing={2} fontSize={[5]}>
                   {item.heading}
                 </Heading>
                 {item.items.map((item) => (
@@ -58,6 +58,7 @@ const Roadmap = () => {
                       px: 2,
                       py: 1,
                       mr: 3,
+                      mt: 3,
                     }}
                   >
                     <Text

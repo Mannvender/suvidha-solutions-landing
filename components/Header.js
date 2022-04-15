@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Heading, Box } from "rebass";
+import { Flex, Box } from "rebass";
 import Image from "next/image";
 import styled, { useTheme } from "styled-components";
 import { SiDiscord, SiTwitter, SiFacebook, SiLinkedin } from "react-icons/si";
@@ -33,8 +33,8 @@ const Header = () => {
                 position: "relative",
                 cursor: "pointer",
               }}
-              height="250px"
-              width="250px"
+              height={["175px", "250px"]}
+              width={["175px", "250px"]}
               mb={[3, 0]}
             >
               <Image

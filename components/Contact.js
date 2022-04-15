@@ -31,7 +31,7 @@ const FaqsSection = () => {
       justifyContent="center"
       role="region"
       aria-label="FAQs"
-      px={[4, 4, 0]}
+      px={[4, 4, 4, 0]}
       id="faqs"
       sx={{ position: "relative" }}
     >

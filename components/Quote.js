@@ -11,7 +11,7 @@ const Quote = () => {
   return (
     <Flex
       maxWidth={["1000px"]}
-      margin={[4, 4, 0]}
+      margin={[4, 4, 4, 0]}
       flexDirection={["row"]}
       alignItems="center"
       justifyContent="center"
