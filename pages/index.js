@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box, Flex, Heading } from "rebass";
+import { Box, Flex, Heading, Text } from "rebass";
 import Header from "components/Header";
 import Banner from "components/Banner";
 import Quote from "components/Quote";
@@ -73,7 +73,7 @@ const Index = () => {
           style={{
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundImage: "url(./planet_bg.svg)",
+            backgroundImage: "url(./starry_night.jpg)",
           }}
         />
         {/* assets */}
@@ -290,20 +290,19 @@ const Index = () => {
             width={["110px", "250px"]}
           >
             <Image
-              src={`/mannvender.jpg`}
+              src={`/mannvender.jpeg`}
               alt={`Mannvender`}
               layout="fill"
               objectFit="contain"
               quality="70"
             />
             <Heading
+              height={"50px"}
               textAlign="center"
-              fontSize={[4, 5]}
+              fontSize={[2, 4, 5]}
               color={colors.light}
               width="100%"
               sx={{
-                position: "absolute",
-                bottom: "-32px",
                 backgroundColor: colors.dark3,
                 paddingY: 1,
               }}
@@ -311,6 +310,21 @@ const Index = () => {
             >
               Mannvender
             </Heading>
+            <Text
+              textAlign="center"
+              fontSize={[1, 3, 4]}
+              letterSpacing={2}
+              color={colors.light}
+              width="100%"
+              sx={{
+                position: "absolute",
+                bottom: "-75px",
+                backgroundColor: colors.dark3,
+                paddingY: 2,
+              }}
+            >
+              Frontend & All Things JavaScript
+            </Text>
           </Box>
         </ParallaxLayer>
         <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
@@ -326,7 +340,7 @@ const Index = () => {
             width={["110px", "230px"]}
           >
             <Image
-              src={`/third.jpg`}
+              src={`/ajay.png`}
               alt={`developer`}
               layout="fill"
               objectFit="contain"
@@ -334,19 +348,33 @@ const Index = () => {
             />
             <Heading
               textAlign="center"
-              fontSize={[4, 5]}
+              height={"50px"}
+              fontSize={[2, 4, 5]}
               color={colors.light}
               width="100%"
               sx={{
-                position: "absolute",
-                bottom: "-32px",
                 backgroundColor: colors.dark3,
                 paddingY: 1,
               }}
               letterSpacing={2}
             >
-              1000101
+              Ajay Kumar
             </Heading>
+            <Text
+              textAlign="center"
+              fontSize={[1, 3, 4]}
+              letterSpacing={2}
+              color={colors.light}
+              width="100%"
+              sx={{
+                position: "absolute",
+                bottom: "-75px",
+                backgroundColor: colors.dark3,
+                paddingY: 2,
+              }}
+            >
+              DevOps & Cloud Management
+            </Text>
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
@@ -370,7 +398,7 @@ const Index = () => {
             width={["130px", "250px"]}
           >
             <Image
-              src={`/naresh.jpg`}
+              src={`/naresh.jpeg`}
               alt={`Naresh`}
               layout="fill"
               objectFit="contain"
@@ -378,19 +406,34 @@ const Index = () => {
             />
             <Heading
               textAlign="center"
-              fontSize={[4, 5]}
+              fontSize={[2, 4, 5]}
               letterSpacing={2}
               color={colors.light}
               width="100%"
               sx={{
-                position: "absolute",
-                bottom: "-45px",
+                position: "relative",
+                top: "30px",
                 backgroundColor: colors.dark3,
                 paddingY: 1,
               }}
             >
               Naresh Dalal
             </Heading>
+            <Text
+              textAlign="center"
+              fontSize={[1, 3, 4]}
+              letterSpacing={2}
+              color={colors.light}
+              width="100%"
+              sx={{
+                position: "absolute",
+                bottom: "-75px",
+                backgroundColor: colors.dark3,
+                paddingY: 1,
+              }}
+            >
+              Solution Architect & Captain
+            </Text>
           </Box>
         </ParallaxLayer>
 
