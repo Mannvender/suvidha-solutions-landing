@@ -41,7 +41,7 @@ const Index = () => {
         backgroundColor: colors.light2,
       }}
     >
-      <Parallax pages={isMobile ? 6 : 5} ref={parallax}>
+      <Parallax pages={isMobile ? 6 : 5.5} ref={parallax}>
         {/* background colors */}
         <ParallaxLayer
           offset={0}
@@ -57,18 +57,18 @@ const Index = () => {
         />
         <ParallaxLayer
           offset={isMobile ? 2 : 2}
-          factor={isMobile ? 2.5 : 1}
+          factor={isMobile ? 2.5 : 1.5}
           speed={1}
           style={{ backgroundColor: colors.accent5 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 4 : 3}
+          offset={isMobile ? 4 : 3.5}
           speed={1}
           factor={1.2}
           style={{ backgroundColor: colors.accent4 }}
         />
         <ParallaxLayer
-          offset={isMobile ? 5 : 4}
+          offset={isMobile ? 5 : 4.99}
           speed={1}
           style={{
             backgroundSize: "cover",
@@ -251,7 +251,7 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4.3 : 4.3}
+          offset={isMobile ? 4.3 : 4.8}
           speed={isMobile ? -0.7 : -0.4}
           style={{
             display: "flex",
@@ -277,7 +277,7 @@ const Index = () => {
             />
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.6} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -327,7 +327,7 @@ const Index = () => {
             </Text>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 5.1 : 4.1} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.6} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -378,7 +378,7 @@ const Index = () => {
           </Box>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 5 : 4}
+          offset={isMobile ? 5 : 4.5}
           speed={-0}
           style={{
             display: "flex",
@@ -412,7 +412,7 @@ const Index = () => {
               width="100%"
               sx={{
                 position: "relative",
-                top: "30px",
+                top: "22px",
                 backgroundColor: colors.dark3,
                 paddingY: 1,
               }}
@@ -501,7 +501,7 @@ const Index = () => {
 
         <ParallaxLayer
           factor={1}
-          offset={isMobile ? 4 : 3}
+          offset={isMobile ? 4 : 3.5}
           speed={0.1}
           style={{
             display: "flex",
