@@ -36,7 +36,7 @@ const Roadmap = () => {
                 height={["auto", "100%", "100%"]}
                 alignItems="center"
                 px={[4]}
-                py={[4]}
+                py={[3, 4]}
                 sx={{
                   backgroundColor: colors[item.color] || item.color,
                 }}
@@ -46,15 +46,15 @@ const Roadmap = () => {
                 </Heading>
               </Flex>
               <Box flexBasis={["100%", "70%"]} p={[4]}>
-                <Heading letterSpacing={2} fontSize={[4, 5]}>
+                <Heading letterSpacing={2} fontSize={[2, 4, 5]}>
                   {item.heading}
                 </Heading>
-                {item.items.map((item) => (
+                {item.items.map((i) => (
                   <Box
                     sx={{
                       display: "inline-block",
                       color: "white",
-                      backgroundColor: colors.primary,
+                      backgroundColor: colors[item.color] || item.color,
                       px: 2,
                       py: 1,
                       mr: 3,
@@ -62,12 +62,12 @@ const Roadmap = () => {
                     }}
                   >
                     <Text
-                      fontSize={[1, 2]}
+                      fontSize={[1, 1, 2]}
                       fontWeight={[fontWeights.normal]}
                       marginTop={[1]}
                       color={colors.dark2}
                     >
-                      {item}
+                      {i}
                     </Text>
                   </Box>
                 ))}
