@@ -277,7 +277,7 @@ const Index = () => {
             />
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 5.1 : 4.6} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.5} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -327,7 +327,7 @@ const Index = () => {
             </Text>
           </Box>
         </ParallaxLayer>
-        <ParallaxLayer offset={isMobile ? 5.1 : 4.6} speed={-0.3}>
+        <ParallaxLayer offset={isMobile ? 5.1 : 4.5} speed={-0.3}>
           <Box
             sx={{
               position: "relative",
@@ -440,7 +440,7 @@ const Index = () => {
         {/* Various Sections */}
         <ParallaxLayer
           factor={1}
-          offset={0.1}
+          offset={0.08}
           speed={0.1}
           style={{
             display: "flex",
