@@ -10,13 +10,13 @@ const getIcon = (name) => {
   const { colors } = useTheme();
   switch (name) {
     case "Phone":
-      return <FaPhoneSquareAlt fill={colors.light} size={20} />;
+      return <FaPhoneSquareAlt fill={colors.primary} size={20} />;
     case "Email":
-      return <MdEmail fill={colors.light} size={20} />;
+      return <MdEmail fill={colors.primary} size={20} />;
     case "Address":
-      return <MdLocationOn fill={colors.light} size={20} />;
+      return <MdLocationOn fill={colors.primary} size={20} />;
     case "Send a message":
-      return <MdMessage fill={colors.light} size={20} />;
+      return <MdMessage fill={colors.primary} size={20} />;
   }
 };
 
@@ -104,7 +104,7 @@ const Contact = () => {
                 item.value.map((v, i) => (
                   <Text
                     mt={[3]}
-                    color={colors.accent5}
+                    color={colors.primary}
                     fontSize={[1, 4]}
                     key={i}
                   >

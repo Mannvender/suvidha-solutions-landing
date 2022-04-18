@@ -70,11 +70,7 @@ const Index = () => {
         <ParallaxLayer
           offset={isMobile ? 5 : 4.99}
           speed={1}
-          style={{
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundImage: "url(./starry_night.jpg)",
-          }}
+          style={{ backgroundColor: colors.accent5 }}
         />
         {/* assets */}
         <ParallaxLayer offset={0} speed={1} style={{ pointerEvents: "none" }}>
@@ -89,15 +85,6 @@ const Index = () => {
           </BannerImageContainer>
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0}
-          speed={0}
-          factor={isMobile ? 4 : 4}
-          style={{
-            backgroundImage: url("stars", true),
-            backgroundSize: "cover",
-          }}
-        />
         <ParallaxLayer
           offset={isMobile ? 3 : 3}
           speed={0.8}
@@ -251,7 +238,7 @@ const Index = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={isMobile ? 4.3 : 4.8}
+          offset={isMobile ? 4.3 : 5}
           speed={isMobile ? -0.7 : -0.4}
           style={{
             display: "flex",
@@ -263,16 +250,20 @@ const Index = () => {
           <Box
             sx={{
               position: "relative",
-              marginLeft: isMobile ? "35%" : "59%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              pointerEvents: "none",
+              mt: [8],
             }}
-            height={["250px", "400px", "500px"]}
-            width={["250px", "400px", "500px"]}
+            height={["300px", "500px", "1000px"]}
+            width={["300px", "500px", "1000px"]}
           >
             <Image
-              src={`/planet.svg`}
-              alt={`asteroid`}
+              src={`/earth.svg`}
+              alt={`earth`}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               quality="80"
             />
           </Box>
@@ -387,7 +378,7 @@ const Index = () => {
             justifyContent: "center",
           }}
         >
-          <Heading fontSize={[5, 7]} color={colors.light}>
+          <Heading fontSize={[5, 7]} color={colors.dark}>
             Team
           </Heading>
           <Box

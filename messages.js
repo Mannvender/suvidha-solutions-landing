@@ -10,32 +10,32 @@ export const SERVICES = [
       "Application Development",
       "Quality Assurance",
     ],
-    color: "accent4",
+    color: "primary",
   },
   {
     when: "02",
     heading: "Mobile and Web Development",
     items: ["Mobile App Development", "Web and Enterprise App Development"],
-    color: "primary",
+    color: "dark3",
   },
   {
     when: "03",
     heading: "Devops and Cloud Infrastructure",
     items: ["Cloud Migration", "Infra Management and Support", "CI/CD"],
-    color: "accent4",
+    color: "primary",
   },
   {
     when: "04",
     heading: "Design &Product Consultancy",
     items: [],
-    color: "primary",
+    color: "dark3",
   },
   {
     when: "04",
     heading:
       "Data Science & Machine Learning & Open-Source Product Customizations",
     items: [],
-    color: "accent4",
+    color: "primary",
   },
 ];
 
@@ -49,7 +49,12 @@ export const CONTACT = [
     height: "90px",
     align: "left",
   },
-  { name: "Phone", value: ["+91 9910017374"], height: "40px", align: "left" },
+  {
+    name: "Phone",
+    value: ["+91 9910017374", "+91-7503284084"],
+    height: "100px",
+    align: "left",
+  },
   {
     name: "Email",
     value: ["sales@suvidhasolutions.com"],

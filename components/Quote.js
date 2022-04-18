@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text } from "rebass";
 import styled, { useTheme } from "styled-components";
 import Image from "next/image";
 export const StyledSpan = styled.span`
-  color: ${(props) => props.theme.colors.dark1};
+  color: ${(props) => props.theme.colors.dark};
 `;
 
 const Quote = () => {
@@ -44,7 +44,7 @@ const Quote = () => {
           “Great companies don't hire skilled people and motivate them, they
           hire already motivated people and inspire them.”
         </Heading>
-        <Text fontSize={[3, 4]} marginTop={[1]} color={colors.dark1}>
+        <Text fontSize={[3, 4]} marginTop={[1]} color={colors.dark}>
           Simon Sinek, <StyledSpan>Start with Why</StyledSpan>
         </Text>
       </Box>
