@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text } from "rebass";
 import { useTheme } from "styled-components";
 import { SERVICES } from "messages";
 
-const Roadmap = () => {
+const Services = () => {
   const { colors, fontWeights } = useTheme();
 
   return (
@@ -49,8 +49,9 @@ const Roadmap = () => {
                 <Heading letterSpacing={2} fontSize={[2, 4, 5]}>
                   {item.heading}
                 </Heading>
-                {item.items.map((i) => (
+                {item.items.map((i, index) => (
                   <Box
+                    key={index}
                     sx={{
                       display: "inline-block",
                       color: "white",
@@ -80,4 +81,4 @@ const Roadmap = () => {
   );
 };
 
-export default Roadmap;
+export default Services;

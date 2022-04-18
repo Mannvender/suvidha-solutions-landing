@@ -26,7 +26,7 @@ export const StyledFlex = styled(Flex)`
     color: ${(props) => props.theme.colors.dark2};
   }
 `;
-const FaqsSection = () => {
+const Contact = () => {
   const { colors } = useTheme();
   const [activeSections, setActive] = useState([]);
 
@@ -67,6 +67,7 @@ const FaqsSection = () => {
       >
         {CONTACT.map((item) => (
           <Box
+            key={item.name}
             p={[4]}
             flexBasis="100%"
             sx={{
@@ -100,8 +101,13 @@ const FaqsSection = () => {
               justifyContent={item.align}
             >
               {!item.iframe &&
-                item.value.map((v) => (
-                  <Text mt={[3]} color={colors.accent5} fontSize={[1, 4]}>
+                item.value.map((v, i) => (
+                  <Text
+                    mt={[3]}
+                    color={colors.accent5}
+                    fontSize={[1, 4]}
+                    key={i}
+                  >
                     {v}
                   </Text>
                 ))}
@@ -125,4 +131,4 @@ const FaqsSection = () => {
   );
 };
 
-export default FaqsSection;
+export default Contact;
