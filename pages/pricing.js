@@ -28,7 +28,7 @@ const Pricing = () => {
           flexWrap="wrap"
           justifyContent="space-evenly"
           color={colors.dark}
-          mb={[4]}
+          mb={[6]}
         >
           {PRICING.map((item) => (
             <PriceCard
