@@ -31,7 +31,7 @@ export const SERVICES = [
     color: "dark3",
   },
   {
-    when: "04",
+    when: "05",
     heading:
       "Data Science & Machine Learning & Open-Source Product Customizations",
     items: [],

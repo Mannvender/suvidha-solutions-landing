@@ -22,8 +22,7 @@ const Banner = ({ onCtaClick }) => {
           fontSize={[5, 6, 6]}
           fontWeight={["bold"]}
           marginBottom={[2]}
-          letterSpacing={2}
-          mb={[4]}
+          mb={[2]}
         >
           Quality digital service you really want !
         </Heading>

@@ -231,7 +231,7 @@ const Index = () => {
           <img
             src={"./satellite.svg"}
             style={{
-              width: isMobile ? "15%" : "25%",
+              width: "15%",
               marginLeft: "70%",
               transform: "rotate(70deg)",
             }}
@@ -297,21 +297,19 @@ const Index = () => {
                 backgroundColor: colors.dark3,
                 paddingY: 1,
               }}
-              letterSpacing={2}
             >
               Mannvender
             </Heading>
             <Text
               textAlign="center"
               fontSize={[1, 3, 4]}
-              letterSpacing={2}
               color={colors.light}
               width="100%"
               sx={{
                 position: "absolute",
                 bottom: "-75px",
                 backgroundColor: colors.dark3,
-                paddingY: 2,
+                padding: 2,
               }}
             >
               Frontend & All Things JavaScript
@@ -347,21 +345,19 @@ const Index = () => {
                 backgroundColor: colors.dark3,
                 paddingY: 1,
               }}
-              letterSpacing={2}
             >
               Ajay Kumar
             </Heading>
             <Text
               textAlign="center"
               fontSize={[1, 3, 4]}
-              letterSpacing={2}
               color={colors.light}
               width="100%"
               sx={{
                 position: "absolute",
                 bottom: "-75px",
                 backgroundColor: colors.dark3,
-                paddingY: 2,
+                padding: 2,
               }}
             >
               DevOps & Cloud Management
@@ -398,7 +394,6 @@ const Index = () => {
             <Heading
               textAlign="center"
               fontSize={[2, 4, 5]}
-              letterSpacing={2}
               color={colors.light}
               width="100%"
               sx={{
@@ -413,14 +408,13 @@ const Index = () => {
             <Text
               textAlign="center"
               fontSize={[1, 3, 4]}
-              letterSpacing={2}
               color={colors.light}
               width="100%"
               sx={{
                 position: "absolute",
                 bottom: "-75px",
                 backgroundColor: colors.dark3,
-                paddingY: 1,
+                padding: 1,
               }}
             >
               Solution Architect & Captain

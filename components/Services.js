@@ -46,9 +46,7 @@ const Services = () => {
                 </Heading>
               </Flex>
               <Box flexBasis={["100%", "70%"]} p={[4]}>
-                <Heading letterSpacing={2} fontSize={[2, 4, 5]}>
-                  {item.heading}
-                </Heading>
+                <Heading fontSize={[2, 4, 5]}>{item.heading}</Heading>
                 {item.items.map((i, index) => (
                   <Box
                     key={index}
