@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Heading, Text, Box } from "rebass";
+import { useTheme } from "styled-components";
 
 const PriceCard = ({
   heading,
