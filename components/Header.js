@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "rebass";
 import Image from "next/image";
 import styled, { useTheme } from "styled-components";
-import { SiDiscord, SiTwitter, SiFacebook, SiLinkedin } from "react-icons/si";
+import { SiDiscord, SiLinkedin } from "react-icons/si";
 import NavLink from "next/link";
 import { LinkExternal as Link } from "components/Links";
 import { isMobile } from "react-device-detect";
@@ -59,14 +59,11 @@ const Header = () => {
               Pricing
             </Text>
           </Link>
-          {/* <Link
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            marginRight={[3]}
-          >
-            <SiTwitter fill={colors.light} size={isMobile ? "20px" : "28px"} />
-          </Link> */}
+          <Link href="/technologies" marginRight={[3]}>
+            <Text fontSize={[2]} color={colors.light}>
+              Technologies
+            </Text>
+          </Link>
           <Link
             href="http://Discord.gg/"
             target="_blank"
@@ -75,14 +72,6 @@ const Header = () => {
           >
             <SiDiscord fill={colors.light} size={isMobile ? "20px" : "28px"} />
           </Link>
-          {/* <Link
-            href="http://fb.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            marginRight={[3]}
-          >
-            <SiFacebook fill={colors.light} size={isMobile ? "20px" : "28px"} />
-          </Link> */}
           <Link
             href="http://linkedin.com/in/"
             target="_blank"

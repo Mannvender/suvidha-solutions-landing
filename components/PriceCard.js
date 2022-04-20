@@ -1,8 +1,5 @@
 import React from "react";
 import { Flex, Heading, Text, Box } from "rebass";
-import styled, { useTheme } from "styled-components";
-import Button from "components/Button";
-import { isDesktop } from "react-device-detect";
 
 const PriceCard = ({
   heading,
